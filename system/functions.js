@@ -516,6 +516,7 @@ module.exports = class Function {
    hitstat = (cmd, who) => {
       if (/bot|help|menu|stat|hitstat|hitdaily/.test(cmd)) return
       if (typeof global.db == 'undefined') return
+      global.db.statistic = global.db.statistic ? global.db.statistic : {}
       if (!global.db.statistic[cmd]) {
          global.db.statistic[cmd] = {
             hitstat: 1,
