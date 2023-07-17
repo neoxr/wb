@@ -1,10 +1,10 @@
 "use strict";
+const fs = require('fs')
 const { Baileys } = new(require('@neoxr/wb'))
 const client = new Baileys({
    sf: 'session',
    version: [2, 2318, 11]
 })
-
 client.on('error', async error => console.log(error.message))
 client.on('ready', async () => {
    /* clear temp folder every 3 minutes */
