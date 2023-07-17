@@ -9,6 +9,7 @@ module.exports = async (client, m, myPrefix, type = 1) => {
    let time = m.messageTimestamp   
    let pc = false
    if (m.chat.endsWith('@s.whatsapp.net')) pc = true
+   if (!Func.mtype(m)) return
    if (!pc) {
       if (typeof m.text != 'object' && m.text.startsWith(myPrefix)) return console.log('\n' + yellow.bold('[ CMD ]'), Func.color(moment(time * 1000).format('DD/MM/YY HH:mm:ss'), 'green'), gray.bgGreen(' ' + m.mtype + ' '), green.bold('from'), '[' + m.sender.split`@` [0] + '] ' + gray.bgYellow(' ' + who + ' '), Func.color('in'), '[' + m.chat + '] ' + gray.bgYellow(' ' + await (await client.groupMetadata(m.chat)).subject + ' '), `\n${Func.mtype(m)}`)
       if (type == 1) console.log('\n' + blueBright.bold('[ MSG ]'), Func.color(moment(time * 1000).format('DD/MM/YY HH:mm:ss'), 'green'), gray.bgGreen(' ' + m.mtype + ' '), green.bold('from'), '[' + m.sender.split`@` [0] + '] ' + gray.bgYellow(' ' + who + ' '), Func.color('in'), '[' + m.chat + '] ' + gray.bgYellow(' ' + await (await client.groupMetadata(m.chat)).subject + ' '), `\n${Func.mtype(m)}`)
