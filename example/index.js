@@ -1,10 +1,3 @@
-# Simplicity WhatsApp Bot (Baileys)
-
-> This is a WhatsApp bot module based on Baileys which can be used in a very easy way.
-
-## Example
-
-```Javascript
 "use strict";
 const { Baileys } = new(require('@neoxr/wb'))
 const client = new Baileys({
@@ -24,4 +17,3 @@ client.on('ready', async () => {
 })
 
 client.on('message', data => console.log(data))
-```

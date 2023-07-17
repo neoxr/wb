@@ -1,7 +1,7 @@
 {
    "name":"@neoxr/wb",
-   "version":"1.4.4",
-   "description":"WhatsApp Bot",
+   "version":"1.5.4",
+   "description":"Simplicity WhatsApp Bot (Baileys)",
    "main":"index.js",
    "scripts":{
       "test":"echo \"Error: no test specified\" && exit 1"
@@ -48,7 +48,7 @@
       "pg":"8.7.3",
       "qrcode-terminal":"^0.12.0",
       "rootpath":"^0.1.2",
-      "spinnies": "^0.5.1",
+      "spinnies": "0.5.1",
       "syntax-error":"~1.4.0",
       "util":"~0.12.4"
    }
