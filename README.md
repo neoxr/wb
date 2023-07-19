@@ -80,6 +80,12 @@ client.reply(m.chat, `Test!`, m)
 // send a react message
 client.sendReact(m.chat, `💀`, m.key)
 
+// send a text message with progress bar
+client.sendProgress(m.chat, `Test!`, m)
+
+// send a ptv message from path, url, or buffer (video duration 10s)
+client.sendPtv(m.chat, `./media/video/yemete.mp4`)
+
 // send a text message with custom thumbnail
 client.sendMessageModify(m.chat, `Test!`, m, {
    title: '© neoxr-bot',
