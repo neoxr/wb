@@ -346,14 +346,8 @@ module.exports = class Function {
                }
                return resolve(data)
             } else if (source.startsWith('./') || source.startsWith('/')) {
-               let ext, mime
-               try {
-                  mime = await (await fromBuffer(source)).mime
-                  ext = await (await fromBuffer(source)).ext
-               } catch {
-                  mime = require('mime-types').lookup(filename ? filename.split`.` [filename.split`.`.length - 1] : 'txt')
-                  ext = require('mime-types').extension(mime)
-               }
+               let mime = require('mime-types').lookup(filename ? filename.split`.` [filename.split`.`.length - 1] : source.split`.` [source.split`.`.length - 1])
+               let ext = require('mime-types').extension(mime)
                let extension = filename ? filename.split`.` [filename.split`.`.length - 1] : ext
                let size = fs.statSync(source).size
                let name = filename || path.basename(source)
