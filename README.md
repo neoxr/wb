@@ -91,8 +91,8 @@ client.sendMessageModify(m.chat, `Test!`, m, {
    title: '© neoxr-bot',
    largeThumb: true,
    ads: false,
-   thumbnail: 'https://iili.io/HP3ODj2.jpg',
    /* can buffer or url */
+   thumbnail: 'https://iili.io/HP3ODj2.jpg',
    link: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
 })
 
