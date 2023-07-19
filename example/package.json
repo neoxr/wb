@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
-    "@neoxr/wb": "latest",
+    "@neoxr/wb": "^1.9.7",
     "baileys": "6.0.7"
   }
 }
