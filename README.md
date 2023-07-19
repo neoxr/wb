@@ -73,6 +73,7 @@ client.on('caller', ctx => console.log(ctx))
 ```
 ### Messaging Function
 
+```Javascript
 // send a text message (auto tagged)
 client.reply(m.chat, `Test!`, m)
 
