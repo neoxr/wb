@@ -4,9 +4,9 @@
 
 ### Example
 
-For example of use you can open the [example](https://github.com/neoxr/wb/tree/master/example) folder.
+For example of use you can open the [example](https://github.com/neoxr/wb/tree/master/example) folder or here for [example base](https://github.com/neoxr/wbot)
 
-<p align="center"><img align="center" width="100%" src="https://telegra.ph/file/68d70b25c662e6a851cd7.png" /></p>
+<p align="center"><img align="center" width="100%" src="https://telegra.ph/file/109138edd11434ddcc30d.png" /></p>
 
 ### Handling Events
 

@@ -16,4 +16,15 @@ client.on('ready', async () => {
    }, 60 * 1000 * 3)
 })
 
-client.on('message', data => console.log(data))
+/* print all message */
+client.on('message', ctx => console.log(ctx))
+
+/* print deleted message */
+client.on('message.delete', ctx => ctx ? client.sock.copyNForward(ctx.chat, ctx.delete) : '')
+
+/* other events */
+client.on('group.add', ctx => console.log(ctx))
+client.on('group.remove', ctx => console.log(ctx))
+client.on('group.promote', ctx => console.log(ctx))
+client.on('group.demote', ctx => console.log(ctx))
+client.on('caller', ctx => console.log(ctx))
