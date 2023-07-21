@@ -8,6 +8,7 @@ const PostgreSQL = /postgres/.test(process.env.DATABASE_URL) && process.env.DATA
 const Dataset = process.env.DATABASE_URL ? new (require('./system/multidb')) : false
 const Logs = require('./system/logs')
 const NeoxrCommands = new (require('./system/neoxr'))
+const NeoxrApi = require('./system/neoxrApi')
 module.exports = class Component {
    Baileys = Baileys
    Converter = Converter
@@ -19,4 +20,5 @@ module.exports = class Component {
    Scandir = Scandir
    Logs = Logs
    NeoxrCommands = NeoxrCommands
+   NeoxrApi = NeoxrApi
 }
