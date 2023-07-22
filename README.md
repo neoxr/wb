@@ -23,7 +23,7 @@ client.on('group.remove', ctx => console.log(ctx))
 client.on('group.promote', ctx => console.log(ctx))
 client.on('group.demote', ctx => console.log(ctx))
 client.on('caller', ctx => console.log(ctx))
-client.on('presence', ctx => console.log(ctx))
+client.on('presence.update', ctx => console.log(ctx))
 ```
 
 ### Event Message (message)
