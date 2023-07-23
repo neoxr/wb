@@ -3,7 +3,7 @@ const cheerio = require('cheerio')
 const fetch = require('node-fetch')
 const FormData = require('form-data')
 const { fromBuffer } = require('file-type')
-global.creator = `@neoxr.js – Wildan Izzudin`
+const creator = `@neoxr.js – Wildan Izzudin`
 
 module.exports = class Scraper {
    /* Chat AI
@@ -16,18 +16,18 @@ module.exports = class Scraper {
          try {
             let json = await (await axios.get('http://api.brainshop.ai/get?bid=' + bid + '&key=' + key + '&uid=neoxr&msg=' + encodeURI(text))).data
             if (typeof json.cnt == 'undefined') return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false
             })
             resolve({
-               cretor: global.creator,
+               cretor: creator,
                status: true,
                msg: json.cnt
             })
          } catch (e) {
             console.log(e)
             return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false
             })
          }
@@ -49,18 +49,18 @@ module.exports = class Scraper {
                }
             })).data
             if (json.success.match(new RegExp('Aku tidak mengerti', 'g'))) return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false
             })
             resolve({
-               cretor: global.creator,
+               cretor: creator,
                status: true,
                msg: json.success
             })
          } catch (e) {
             console.log(e)
             return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false
             })
          }
@@ -75,18 +75,18 @@ module.exports = class Scraper {
          try { // https://simsimi.net/ & https://simsimi.info
             let json = await (await axios.get('https://api.simsimi.net/v2/?text=' + encodeURI(text) + '&lc=id')).data
             if (json.success.match(new RegExp('Aku tidak mengerti', 'g'))) return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false
             })
             resolve({
-               cretor: global.creator,
+               cretor: creator,
                status: true,
                msg: json.success
             })
          } catch (e) {
             console.log(e)
             return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false
             })
          }
@@ -106,11 +106,11 @@ module.exports = class Scraper {
                body: params
             })).json()
             if (json.error) return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false
             })
             resolve({
-               creator: global.creator,
+               creator: creator,
                status: true,
                data: {
                   url: 'https://s.nxr.my.id/r/' + json.data.code
@@ -119,7 +119,7 @@ module.exports = class Scraper {
          } catch (e) {
             console.log(e)
             resolve({
-               creator: global.creator,
+               creator: creator,
                status: false
             })
          }
@@ -159,12 +159,12 @@ module.exports = class Scraper {
                }
             })).data
             if (json.status_code != 200) return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false,
                msg: `Failed to Upload!`
             })
             resolve({
-               creator: global.creator,
+               creator: creator,
                status: true,
                original: json,
                data: {
@@ -174,7 +174,7 @@ module.exports = class Scraper {
          } catch (e) {
             console.log(e)
             resolve({
-               creator: global.creator,
+               creator: creator,
                status: false,
                msg: e.message
             })
@@ -202,7 +202,7 @@ module.exports = class Scraper {
          } catch (e) {
             console.log(e)
             return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false,
                msg: e.message
             })
@@ -241,12 +241,12 @@ module.exports = class Scraper {
                }
             })).data
             if (!json || json.length < 1) return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false,
                msg: 'Failed to upload!'
             })
             resolve({
-               creator: global.creator,
+               creator: creator,
                status: true,
                data: {
                   url: 'https://telegra.ph' + json[0].src
@@ -255,7 +255,7 @@ module.exports = class Scraper {
          } catch (e) {
             console.log(e)
             resolve({
-               creator: global.creator,
+               creator: creator,
                status: false,
                msg: e.message
             })
@@ -283,7 +283,7 @@ module.exports = class Scraper {
          } catch (e) {
             console.log(e)
             return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false,
                msg: e.message
             })
@@ -317,19 +317,19 @@ module.exports = class Scraper {
                body: form
             })).json()
             if (!json.success) return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false
             })
             delete json.success
             delete json.status
             resolve({
-               creator: global.creator,
+               creator: creator,
                status: true,
                data: json
             })
          } catch (e) {
             resolve({
-               creator: global.creator,
+               creator: creator,
                status: false
             })
          }
@@ -390,12 +390,12 @@ module.exports = class Scraper {
             })).data
             const link = cheerio.load(proc)('#output > p.outfile').find('video > source').attr('src')
             if (!link) return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false,
                msg: 'Failed to convert!'
             })
             resolve({
-               creator: global.creator,
+               creator: creator,
                status: true,
                data: {
                   url: 'https:' + link
@@ -404,7 +404,7 @@ module.exports = class Scraper {
          } catch (e) {
             console.log(e)
             resolve({
-               creator: global.creator,
+               creator: creator,
                status: false,
                msg: e.message
             })
@@ -443,12 +443,12 @@ module.exports = class Scraper {
                }
             })).data
             if (!json.success) return resolve({
-               creator: global.creator,
+               creator: creator,
                status: false,
                msg: 'Failed to convert!'
             })
             resolve({
-               creator: global.creator,
+               creator: creator,
                status: true,
                data: {
                   url: json.optimized_image_url
@@ -457,7 +457,7 @@ module.exports = class Scraper {
          } catch (e) {
             console.log(e)
             resolve({
-               creator: global.creator,
+               creator: creator,
                status: false,
                msg: e.message
             })

@@ -75,20 +75,23 @@ client.on('presence.update', ctx => console.log(ctx))
 ### Messaging Function
 
 ```Javascript
+// declaration variable sock
+const sock = client.sock
+
 // send a text message (auto tagged)
-client.reply(m.chat, `Test!`, m)
+sock.reply(m.chat, `Test!`, m)
 
 // send a react message
-client.sendReact(m.chat, `💀`, m.key)
+sock.sendReact(m.chat, `💀`, m.key)
 
 // send a text message with progress bar
-client.sendProgress(m.chat, `Test!`, m)
+sock.sendProgress(m.chat, `Test!`, m)
 
 // send a ptv message from path, url, or buffer (video duration 10s)
-client.sendPtv(m.chat, `./media/video/yemete.mp4`)
+sock.sendPtv(m.chat, `./media/video/yemete.mp4`)
 
 // send a text message with custom thumbnail
-client.sendMessageModify(m.chat, `Test!`, m, {
+sock.sendMessageModify(m.chat, `Test!`, m, {
    title: '© neoxr-bot',
    largeThumb: true,
    ads: false,
@@ -98,29 +101,29 @@ client.sendMessageModify(m.chat, `Test!`, m, {
 })
 
 // send a file from path, url, or buffer (auto extension)
-client.sendFile(m.chat, 'https://iili.io/HP3ODj2.jpg', 'image.jpg', 'Test!', m)
+sock.sendFile(m.chat, 'https://iili.io/HP3ODj2.jpg', 'image.jpg', 'Test!', m)
 
 // send a document from path, url, or buffer (auto extension)
-client.sendFile(m.chat, 'https://iili.io/HP3ODj2.jpg', 'image.jpg', 'Test!', m, {
+sock.sendFile(m.chat, 'https://iili.io/HP3ODj2.jpg', 'image.jpg', 'Test!', m, {
    document: true
 })
 
 // send a voicenote from path, url, or buffer
-client.sendFile(m.chat, './media/audio/ah.mp3', '', '', m, {
+sock.sendFile(m.chat, './media/audio/ah.mp3', '', '', m, {
    ptt: true
 })
 
 // send a audio from path, url, or buffer with thumbnail in audio tag
-client.sendFile(m.chat, './media/audio/ah.mp3', '', '', m, {
+sock.sendFile(m.chat, './media/audio/ah.mp3', '', '', m, {
    APIC: < Buffer >
 })
 
 // send a sticker message from url or buffer
-client.sendSticker(m.chat, 'https://iili.io/HP3ODj2.jpg', m, {
+sock.sendSticker(m.chat, 'https://iili.io/HP3ODj2.jpg', m, {
    packname: 'Sticker by',
    author: '© neoxr.js'
 })
 
 // forward message
-client.copyNForward(m.chat, m)
+sock.copyNForward(m.chat, m)
 ```

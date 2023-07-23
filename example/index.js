@@ -3,6 +3,7 @@ const fs = require('fs')
 const { Baileys } = new(require('@neoxr/wb'))
 const client = new Baileys({
    sf: 'session',
+   online: true,
    version: [2, 2318, 11]
 })
 client.on('error', async error => console.log(error.message))

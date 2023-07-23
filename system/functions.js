@@ -10,7 +10,7 @@ const { fromBuffer } = require('file-type')
 const { green, blueBright, redBright } = require('chalk')
 const { tmpdir } = require('os')
 const moment = require('moment-timezone')
-moment.tz.setDefault(global.timezone)
+moment.tz.setDefault('Asia/Jakarta')
 const NodeID3 = require('node-id3')
 const {
    read,
@@ -709,7 +709,7 @@ module.exports = class Function {
     * @param ()
     */
    greeting = () => {
-      let time = moment.tz(global.timezone).format('HH')
+      let time = moment.tz('Asia/Jakarta').format('HH')
       let res = `Don't forget to sleep`
       if (time >= 3) res = `Good Evening`
       if (time > 6) res = `Good Morning`
