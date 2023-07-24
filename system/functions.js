@@ -345,7 +345,7 @@ module.exports = class Function {
                   bytes: size
                }
                return resolve(data)
-            } else if (source.startsWith('./') || source.startsWith('/')) {
+            } else if (source && source.startsWith('./') || source && source.startsWith('/')) {
                let mime = require('mime-types').lookup(filename ? filename.split`.` [filename.split`.`.length - 1] : source.split`.` [source.split`.`.length - 1])
                let ext = require('mime-types').extension(mime)
                let extension = filename ? filename.split`.` [filename.split`.`.length - 1] : ext
