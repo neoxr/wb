@@ -1,6 +1,6 @@
 {
    "name":"@neoxr/wb",
-   "version":"1.14.13",
+   "version":"1.17.17",
    "description":"Simplicity WhatsApp Bot (Baileys)",
    "main":"index.js",
    "scripts":{
