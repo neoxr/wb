@@ -39,7 +39,7 @@
       "html-entities":"~2.3.2",
       "jimp":"^0.16.1",
       "mime-types":"~2.1.32",
-      "mongodb":"4.9.0",
+      "mongodb":"4.17.0",
       "mongoose":"5.10.8",
       "moment-timezone":"~0.5.34",
       "node-cache":"^5.1.2",
