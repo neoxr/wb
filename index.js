@@ -1,5 +1,5 @@
 require('dotenv').config()
-const { Baileys, Scandir } = require('./system/baileys')
+const { Baileys, Scandir, InvCloud } = require('./system/baileys')
 const Converter = new (require('./system/converter'))
 const Function = new (require('./system/functions'))
 const Scraper = new (require('./system/scraper'))
@@ -8,7 +8,10 @@ const PostgreSQL = /postgres/.test(process.env.DATABASE_URL) && process.env.DATA
 const Dataset = process.env.DATABASE_URL ? new (require('./system/multidb')) : false
 const Logs = require('./system/logs')
 const NeoxrCommands = new (require('./system/neoxr'))
-const NeoxrApi = require('./system/neoxrApi')
+const NeoxrApi = require('@neoxr/api')
+const Cooldown = require('./system/cooldown')
+const Queue = require('./system/queue')
+const Spam = require('./system/spamDetector')
 module.exports = class Component {
    Baileys = Baileys
    Converter = Converter
@@ -18,7 +21,11 @@ module.exports = class Component {
    PostgreSQL = PostgreSQL
    Dataset = Dataset
    Scandir = Scandir
+   InvCloud = InvCloud
    Logs = Logs
    NeoxrCommands = NeoxrCommands
    NeoxrApi = NeoxrApi
+   Cooldown = Cooldown
+   Queue = Queue
+   Spam = Spam
 }

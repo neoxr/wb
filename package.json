@@ -1,45 +1,51 @@
 {
    "name":"@neoxr/wb",
-   "version":"1.17.22",
+   "version":"2.0.1",
    "description":"Simplicity WhatsApp Bot (Baileys)",
    "main":"index.js",
    "scripts":{
-      "test":"echo \"Error: no test specified\" && exit 1"
+      "test":"node ./example/index.js"
    },
    "repository":{
       "type":"git",
-      "url":"git+https://github.com/neoxr/wb.git"
+      "url":"git+https://github.com/neoxr/neoxr-bot.git"
    },
    "keywords":[
       "whattapp-bot",
       "whatsapp-api",
       "bot",
       "whatsapp",
-      "wabot"
+      "wabot",
+      "baileys"
    ],
    "author":"Wildan Izzudin",
    "license":"ISC",
    "bugs":{
-      "url":"https://github.com/neoxr/wb/issues"
+      "url":"https://github.com/neoxr/neoxr-bot/issues"
    },
-   "homepage":"https://github.com/neoxr/wb#readme",
+   "homepage":"https://github.com/neoxr/neoxr-bot#readme",
    "dependencies":{
+      "@neoxr/api": "^1.5.3",
+      "@neoxr/helper": "^1.2.1",
+      "@neoxr/ytdl-core":"^4.11.5",
       "awesome-phonenumber":"~2.59.0",
       "axios":"~0.24.0",
-      "chalk":"~4.1.0",
+      "chalk":"4.1.0",
       "cheerio":"~1.0.0-rc.5",
       "child_process":"~1.0.2",
+      "cloudscraper": "4.6.0",
       "colors":"1.4.0",
       "crypto":"1.0.1",
       "dotenv": "^16.0.1",
       "fs":"0.0.1-security",
       "file-type":"~16.5.2",
-      "fluent-ffmpeg":"2.1.2",
+      "fluent-ffmpeg":"npm:@neoxr/fluent-ffmpeg",
       "form-data":"~4.0.0",
       "html-entities":"~2.3.2",
       "jimp":"^0.16.1",
       "mime-types":"~2.1.32",
-      "mongodb":"4.17.0",
+      "miniget": "^4.2.3",
+      "mongodb":"4.x",
       "mongoose":"5.10.8",
       "moment-timezone":"~0.5.34",
       "node-cache":"^5.1.2",
@@ -50,9 +56,13 @@
       "path":"~0.12.7",
       "pg":"8.7.3",
       "qrcode-terminal":"^0.12.0",
+      "request": "^2.88.2",
       "rootpath":"^0.1.2",
       "spinnies": "0.5.1",
+      "stream": "^0.0.2",
       "syntax-error":"~1.4.0",
-      "util":"~0.12.4"
+      "translate-google-api": "1.0.4",
+      "util":"~0.12.4",
+      "yt-search": "^2.10.3"
    }
 }

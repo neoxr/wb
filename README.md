@@ -6,7 +6,7 @@
 
 For example of use you can open the [example](https://github.com/neoxr/wb/tree/master/example) folder or here for [example base](https://github.com/neoxr/wbot)
 
-<p align="center"><img align="center" width="100%" src="https://telegra.ph/file/109138edd11434ddcc30d.png" /></p>
+<p align="center"><img align="center" width="100%" src="https://telegra.ph/file/9eba13b933e03e2203af0.png" /></p>
 
 ### Handling Events
 
@@ -23,6 +23,7 @@ client.on('group.remove', ctx => console.log(ctx))
 client.on('group.promote', ctx => console.log(ctx))
 client.on('group.demote', ctx => console.log(ctx))
 client.on('caller', ctx => console.log(ctx))
+client.on('poll', ctx => console.log(ctx))
 client.on('presence.update', ctx => console.log(ctx))
 ```
 
@@ -100,6 +101,19 @@ sock.sendMessageModify(m.chat, `Test!`, m, {
    link: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
 })
 
+// send a text message with custom thumbnail & fake quoted
+sock.sendMessageModifyV2(m.chat, `Test!`, '© neoxr-bot', {
+   title: '© neoxr-bot',
+   largeThumb: true,
+   ads: false,
+   /* can buffer or url */
+   thumbnail: 'https://iili.io/HP3ODj2.jpg',
+   link: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
+})
+
+// send a text message with fake quoted
+sock.sendMessageVerify(m.chat, `Test!`, '© neoxr-bot')
+
 // send a file from path, url, or buffer (auto extension)
 sock.sendFile(m.chat, 'https://iili.io/HP3ODj2.jpg', 'image.jpg', 'Test!', m)
 
@@ -124,6 +138,118 @@ sock.sendSticker(m.chat, 'https://iili.io/HP3ODj2.jpg', m, {
    author: '© neoxr.js'
 })
 
+// send polling message
+sock.sendPoll(m.chat, 'Do you like this library ?', {
+   options: ['Yes', 'No'],
+   multiselect: false
+})
+
+// send contact message
+sock.sendContact(m.chat, [{
+   name: 'Wildan Izzudin',
+   number: '6285887776722',
+   about: 'Owner & Creator'
+}], m, {
+   org: 'Neoxr Network',
+   website: 'https://api.neoxr.my.id',
+   email: 'contact@neoxr.my.id'
+})
+
 // forward message
 sock.copyNForward(m.chat, m)
+
+// send button message (your own risk)
+var buttons = [{
+   name: "quick_reply",
+   buttonParamsJson: JSON.stringify({
+      display_text: "OWNER",
+      id: '.owner'
+   }),
+}, {
+   name: "cta_url",
+   buttonParamsJson: JSON.stringify({
+      display_text: "Rest API",
+      url: "https://api.neoxr.my.id",
+      merchant_url: "https://api.neoxr.my.id"
+   })
+}, {
+   name: "cta_copy",
+   buttonParamsJson: JSON.stringify({
+      display_text: "Copy",
+      copy_code: "123456"
+   })
+}, {
+   name: "cta_call",
+   buttonParamsJson: JSON.stringify({
+      display_text: "Call",
+      phone_number: "6285887776722"
+   })
+}, {
+   name: "single_select",
+   buttonParamsJson: JSON.stringify({
+      title: "Tap!",
+      sections: [{
+         rows: [{
+            title: "Owner",
+            description: `X`,
+            id: `.owner`
+         }, {
+            title: "Runtime",
+            description: `Y`,
+            id: `.run`
+         }]
+      }]
+   })
+}]
+
+// button & list
+client.sendIAMessage(m.chat, buttons, m, {
+   header: '',
+   content: 'Hi!',
+   footer: '',
+   media: global.db.setting.cover // video or image link
+})
+
+// carousel message
+const cards = [{
+   header: {
+      imageMessage: global.db.setting.cover,
+      hasMediaAttachment: true,
+   },
+   body: {
+      text: "P"
+   },
+   nativeFlowMessage: {
+      buttons: [{
+         name: "cta_url",
+         buttonParamsJson: JSON.stringify({
+            display_text: 'Contact Owner',
+            url: 'https://api.neoxr.eu',
+            webview_presentation: null
+         })
+      }]
+   }
+}, {
+   header: {
+      imageMessage: global.db.setting.cover,
+      hasMediaAttachment: true,
+   },
+   body: {
+      text: "P"
+   },
+   nativeFlowMessage: {
+      buttons: [{
+         name: "cta_url",
+         buttonParamsJson: JSON.stringify({
+            display_text: 'Contact Owner',
+            url: 'https://api.neoxr.eu',
+            webview_presentation: null
+         })
+      }]
+   }
+}]
+
+client.sendCarousel(m.chat, cards, m, {
+   content: 'Hi!'
+})
 ```

@@ -1,12 +1,13 @@
 const fs = require('fs')
 const path = require('path')
 const { spawn } = require('child_process')
+const Func = new (require('./functions'))
 
 module.exports = class Converter {
    ffmpeg = (buffer, args = [], ext = '', ext2 = '') => {
       return new Promise(async (resolve, reject) => {
          try {
-            let tmp = 'temp/' + new Date + '.' + ext
+            let tmp = 'temp/' + Func.uuid() + '.' + ext
             let out = tmp + '.' + ext2
             await fs.promises.writeFile(tmp, buffer)
             spawn('ffmpeg', [
