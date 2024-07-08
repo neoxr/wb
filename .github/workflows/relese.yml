@@ -20,7 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - if: ${{ steps.build_nightly.outputs.publish == 'yes' }}
-        run: npm publish --access public --tag=2.x
+        run: npm publish --provenance --access public --tag=2.x
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
