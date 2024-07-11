@@ -9,18 +9,14 @@ module.exports = class MongoDB {
       this.db = db || 'database'
       this.options = options
       this.client = null
-      this.connection()
       this.init()
    }
 
-   connection = () => {
-      this.client = new MongoClient(process.env.DATABASE_URL, this.options)
-      this.client.connect()
-   }
+   client = new MongoClient(process.env.DATABASE_URL, this.options)
 
    exec = async (collect) => {
       try {
-         // await this.client.connect()
+         await this.client.connect()
          const db = await this.client.db(this.db).collection(collect)
          return db
       } catch (e) {
@@ -77,7 +73,7 @@ module.exports = class MongoDB {
 
    init = async () => {
       try {
-         // await this.client.connect()
+         await this.client.connect()
          const db = await this.client.db(this.db)
          const data = await (await db.listCollections().toArray()).some(v => v.name == 'data')
          if (!data) db.createCollection('data')

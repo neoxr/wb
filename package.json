@@ -1,6 +1,6 @@
 {
    "name":"@neoxr/wb",
-   "version":"2.1.0-dev",
+   "version":"2.1.1",
    "description":"Simplicity WhatsApp Bot (Baileys)",
    "main":"index.js",
    "scripts":{
@@ -45,7 +45,7 @@
       "jimp":"^0.16.1",
       "mime-types":"~2.1.32",
       "miniget": "^4.2.3",
-      "mongodb":"4.x",
+      "mongodb":"4.9.0",
       "mongoose":"5.10.8",
       "moment-timezone":"~0.5.34",
       "node-cache":"^5.1.2",
