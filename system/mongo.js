@@ -9,10 +9,9 @@ module.exports = class MongoDB {
       this.db = db || 'database'
       this.options = options
       this.client = null
+      this.client = new MongoClient(process.env.DATABASE_URL, this.options)
       this.init()
    }
-
-   client = new MongoClient(process.env.DATABASE_URL, this.options)
 
    exec = async (collect) => {
       try {
