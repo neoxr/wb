@@ -27,7 +27,7 @@
    "dependencies":{
       "@neoxr/api": "^1.5.3",
       "@neoxr/helper": "^1.2.1",
-      "@neoxr/ytdl-core":"npm:@ybd-project/ytdl-core",
+      "@neoxr/ytdl-core":"latest",
       "awesome-phonenumber":"~2.59.0",
       "axios":"~0.24.0",
       "chalk":"4.1.0",
