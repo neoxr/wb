@@ -234,7 +234,7 @@ module.exports = class Scraper {
                }
             })
          } catch (e) {
-            console.log(e)
+            // console.log(e)
             resolve({
                creator: creator,
                status: false,
