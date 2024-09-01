@@ -1,6 +1,6 @@
 {
    "name":"@neoxr/wb",
-   "version":"2.1.4",
+   "version":"2.3.7",
    "description":"Simplicity WhatsApp Bot (Baileys)",
    "main":"index.js",
    "scripts":{
@@ -27,7 +27,7 @@
    "dependencies":{
       "@neoxr/api": "^1.5.3",
       "@neoxr/helper": "^1.2.1",
-      "@neoxr/ytdl-core":"latest",
+      "@neoxr/ytdl-core":"^4.12.5",
       "awesome-phonenumber":"~2.59.0",
       "axios":"~0.24.0",
       "chalk":"4.1.0",
