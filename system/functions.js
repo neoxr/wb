@@ -376,6 +376,20 @@ module.exports = class Function {
                      ...options
                   }
                })
+               mg.on('error', (err) => {
+                  if (err.statusCode > 400) {
+                     resolve({
+                        status: false,
+                        msg: `[${err.statusCode}] : Error while gwtting file`
+                     })
+                  } else {
+                     resolve({
+                        status: false,
+                        msg: `[${err.message}] : Error while gwtting file`
+                     })
+                  }
+                  mg.destroy()
+               })
                mg.on('response', (response) => {
                   if (response.statusCode !== 200) {
                      resolve({
