@@ -362,69 +362,61 @@ module.exports = class Function {
                return resolve(data)
             })
          } else {
-            return new Promise(resolve => {
-               const mg = new Miniget(source, {
+            return new Promise(async resolve => {
+               const cf = await cloudscraper({
+                  method: 'GET',
+                  url: source,
                   headers: {
                      "Accept": "*/*",
-                     "User-Agent": "Mozilla/5.0 (Linux; Android 6.0.1; SM-J500G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Mobile Safari/537.36",
+                     "Cache-Control": "no-cache",
+                     "Connection": "Keep-Alive",
+                     "Dnt": "1",
                      "Referrer-Policy": "strict-origin-when-cross-origin",
                      "sec-ch-ua": '"Chromium";v="107", "Not=A?Brand";v="24"',
                      "sec-ch-ua-platform": "Android",
                      "sec-fetch-dest": "empty",
                      "sec-fetch-mode": "cors",
                      "sec-fetch-site": "same-origin",
+                     "Pragma": "no-cache",
+                     "Priority": "u=1, i",
+                     "User-Agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+                     "Upgrade-Insecure-Requests": "1",
+                     "X-Requested-With": "XMLHttpRequest",
                      ...options
+                  },
+                  encoding: null,
+                  resolveWithFullResponse: true
+               })
+               if (cf.statusCode !== 200) return resolve({
+                  status: false,
+                  msg: `[${cf.statusCode}] : Error while getting file!`
+               })
+               const extension = filename ? filename.split`.` [filename.split`.`.length - 1] : mime.extension(cf.headers['content-type'])
+               const file = fs.createWriteStream(`temp/${this.uuid() + '.' + extension}`)
+               const name = filename || path.basename(file.path)
+               const transformStream = new stream.Transform({
+                  transform(chunk, encoding, callback) {
+                     callback(null, chunk)
                   }
                })
-               mg.on('error', (err) => {
-                  if (err.statusCode > 400) {
-                     resolve({
-                        status: false,
-                        msg: `[${err.statusCode}] : Error while gwtting file`
-                     })
-                  } else {
-                     resolve({
-                        status: false,
-                        msg: `[${err.message}] : Error while gwtting file`
-                     })
+               cf.pipe(transformStream).pipe(file)
+               file.on('finish', () => {
+                  const data = {
+                     status: true,
+                     file: file.path,
+                     filename: name,
+                     mime: mime.lookup(file.path),
+                     extension: extension,
+                     size: this.formatSize(cf.headers['content-length'] ? cf.headers['content-length'] : 0),
+                     bytes: cf.headers['content-length'] ? parseInt(cf.headers['content-length']) : 0,
+                     headers: cf.headers
                   }
-                  mg.destroy()
+                  resolve(data)
                })
-               mg.on('response', (response) => {
-                  if (response.statusCode !== 200) {
-                     resolve({
-                        status: false,
-                        msg: `[${response.statusCode}] : Error while gwtting file`
-                     })
-                     return
-                  }
-                  const extension = filename ? filename.split`.` [filename.split`.`.length - 1] : mime.extension(response.headers['content-type'])
-                  const file = fs.createWriteStream(`temp/${this.uuid() + '.' + extension}`)
-                  const name = filename || path.basename(file.path)
-                  const transformStream = new stream.Transform({
-                     transform(chunk, encoding, callback) {
-                        callback(null, chunk)
-                     }
-                  })
-                  mg.pipe(transformStream).pipe(file)
-                  file.on('finish', () => {
-                     const data = {
-                        status: true,
-                        file: file.path,
-                        filename: name,
-                        mime: mime.lookup(file.path),
-                        extension: extension,
-                        size: this.formatSize(response.headers['content-length'] ? response.headers['content-length'] : 0),
-                        bytes: response.headers['content-length'] ? parseInt(response.headers['content-length']) : 0,
-                        headers: response.headers
-                     }
-                     resolve(data)
-                  })
-                  .on('error', (error) => {
-                     resolve({
-                        status: false,
-                        msg: `Error when getting the file`
-                     })
+               .on('error', (error) => {
+                  resolve({
+                     status: false,
+                     msg: `Error when getting the file`
                   })
                })
             })
