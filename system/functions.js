@@ -388,12 +388,12 @@ module.exports = class Function {
                      if (err.statusCode > 400) {
                         resolve({
                            status: false,
-                           msg: `[${err.statusCode}] : Error while gwtting file`
+                           msg: `[${err.statusCode}] : Error while getting file`
                         })
                      } else {
                         resolve({
                            status: false,
-                           msg: `[${err.message}] : Error while gwtting file`
+                           msg: `[${err.message}] : Error while getting file`
                         })
                      }
                      mg.destroy()
@@ -402,7 +402,7 @@ module.exports = class Function {
                      if (response.statusCode !== 200) {
                         resolve({
                            status: false,
-                           msg: `[${response.statusCode}] : Error while gwtting file`
+                           msg: `[${response.statusCode}] : Error while getting file`
                         })
                         return
                      }
