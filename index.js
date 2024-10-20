@@ -1,5 +1,5 @@
 require('dotenv').config()
-const { Baileys, Scandir, InvCloud } = require('./system/baileys')
+const { Baileys, Scandir, InvCloud, Connector } = require('./system/baileys')
 const Converter = new (require('./system/converter'))
 const Function = new (require('./system/functions'))
 const Scraper = new (require('./system/scraper'))
@@ -28,4 +28,5 @@ module.exports = class Component {
    Cooldown = Cooldown
    Queue = Queue
    Spam = Spam
+   Connector = Connector
 }
