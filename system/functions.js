@@ -323,12 +323,12 @@ module.exports = class Function {
                mime = await (await fromBuffer(source)).mime
                ext = await (await fromBuffer(source)).ext
             } catch {
-               mime = require('mime-types').lookup(filename ? filename.split`.` [filename.split`.`.length - 1] : 'txt')
+               mime = require('mime-types').lookup(filename ? filename.split`.`.pop() : 'txt')
                ext = require('mime-types').extension(mime)
             }
             const extension = filename ? filename.split`.`.pop() : ext
             const size = Buffer.byteLength(source)
-            const filepath = 'temp/' + (this.uuid() + '.' + ext)
+            const filepath = 'temp/' + (this.uuid() + '.' + extension)
             const file = fs.writeFileSync(filepath, source)
             const name = filename || path.basename(filepath)
             return new Promise(resolve => {
@@ -344,7 +344,7 @@ module.exports = class Function {
                return resolve(data)
             })
          } else if (source.startsWith('./') || source.startsWith('/')) {
-            const mime = require('mime-types').lookup(filename ? filename.split`.` [filename.split`.`.length - 1] : source.split`.` [source.split`.`.length - 1])
+            const mime = require('mime-types').lookup(filename ? filename.split`.`.pop() : source.split`.`.pop())
             const ext = require('mime-types').extension(mime)
             const extension = filename ? filename.split`.`.pop() : ext
             const size = fs.statSync(source).size
@@ -355,7 +355,7 @@ module.exports = class Function {
                   file: source,
                   filename: name,
                   mime: mime,
-                  extension: ext,
+                  extension: extension,
                   size: this.formatSize(size),
                   bytes: size
                }
@@ -366,21 +366,21 @@ module.exports = class Function {
                try {
                   const mg = new Miniget(source, {
                      headers: {
-                        "Accept": "*/*",
-                        "Cache-Control": "no-cache",
-                        "Connection": "Keep-Alive",
+                        // "Accept": "*/*",
+                        // "Cache-Control": "no-cache",
+                        // "Connection": "Keep-Alive",
                         "Dnt": "1",
-                        "Referrer-Policy": "strict-origin-when-cross-origin",
-                        "sec-ch-ua": '"Chromium";v="107", "Not=A?Brand";v="24"',
-                        "sec-ch-ua-platform": "Android",
-                        "sec-fetch-dest": "empty",
-                        "sec-fetch-mode": "cors",
-                        "sec-fetch-site": "same-origin",
-                        "Pragma": "no-cache",
-                        "Priority": "u=1, i",
-                        "User-Agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+                        // "Referrer-Policy": "strict-origin-when-cross-origin",
+                        // "sec-ch-ua": '"Chromium";v="107", "Not=A?Brand";v="24"',
+                        // "sec-ch-ua-platform": "Android",
+                        // "sec-fetch-dest": "empty",
+                        // "sec-fetch-mode": "cors",
+                        // "sec-fetch-site": "same-origin",
+                        // "Pragma": "no-cache",
+                        // "Priority": "u=1, i",
+                        // "User-Agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
                         "Upgrade-Insecure-Requests": "1",
-                        "X-Requested-With": "XMLHttpRequest",
+                        // "X-Requested-With": "XMLHttpRequest",
                         ...options
                      }
                   })
@@ -407,7 +407,8 @@ module.exports = class Function {
                         return
                      }
                      const extension = filename ? filename.split`.`.pop() : mime.extension(response.headers['content-type'])
-                     const file = filename ? fs.createWriteStream(`temp/${filename}`) : fs.createWriteStream(`temp/${this.uuid() + '.' + extension}`)
+                     const file = fs.createWriteStream(`temp/${this.uuid() + '.' + extension}`)
+                     console.log(file)
                      const name = filename || path.basename(file.path)
                      const transformStream = new stream.Transform({
                         transform(chunk, encoding, callback) {
