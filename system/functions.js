@@ -326,7 +326,7 @@ module.exports = class Function {
                mime = require('mime-types').lookup(filename ? filename.split`.` [filename.split`.`.length - 1] : 'txt')
                ext = require('mime-types').extension(mime)
             }
-            const extension = filename ? filename.split`.` [filename.split`.`.length - 1] : ext
+            const extension = filename ? filename.split`.`.pop() : ext
             const size = Buffer.byteLength(source)
             const filepath = 'temp/' + (this.uuid() + '.' + ext)
             const file = fs.writeFileSync(filepath, source)
@@ -346,7 +346,7 @@ module.exports = class Function {
          } else if (source.startsWith('./') || source.startsWith('/')) {
             const mime = require('mime-types').lookup(filename ? filename.split`.` [filename.split`.`.length - 1] : source.split`.` [source.split`.`.length - 1])
             const ext = require('mime-types').extension(mime)
-            const extension = filename ? filename.split`.` [filename.split`.`.length - 1] : ext
+            const extension = filename ? filename.split`.`.pop() : ext
             const size = fs.statSync(source).size
             const name = filename || path.basename(source)
             return new Promise(resolve => {
@@ -406,8 +406,8 @@ module.exports = class Function {
                         })
                         return
                      }
-                     const extension = filename ? filename.split`.` [filename.split`.`.length - 1] : mime.extension(response.headers['content-type'])
-                     const file = fs.createWriteStream(`temp/${this.uuid() + '.' + extension}`)
+                     const extension = filename ? filename.split`.`.pop() : mime.extension(response.headers['content-type'])
+                     const file = filename ? fs.createWriteStream(`temp/${filename}`) : fs.createWriteStream(`temp/${this.uuid() + '.' + extension}`)
                      const name = filename || path.basename(file.path)
                      const transformStream = new stream.Transform({
                         transform(chunk, encoding, callback) {
