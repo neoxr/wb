@@ -408,7 +408,6 @@ module.exports = class Function {
                      }
                      const extension = filename ? filename.split`.`.pop() : mime.extension(response.headers['content-type'])
                      const file = fs.createWriteStream(`temp/${this.uuid() + '.' + extension}`)
-                     console.log(file)
                      const name = filename || path.basename(file.path)
                      const transformStream = new stream.Transform({
                         transform(chunk, encoding, callback) {
