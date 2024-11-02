@@ -7,11 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Wildan Izzudin",
   "license": "ISC",
   "dependencies": {
+    "@adiwajshing/baileys": "npm:@neoxr/baileys",
     "@adiwajshing/keyed-db": "^0.2.4",
-    "@neoxr/wb": "^1.9.7",
-    "baileys": "6.0.7"
+    "@neoxr/wb": "^2.6.7"
   }
 }
