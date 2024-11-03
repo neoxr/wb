@@ -1,2 +1,359 @@
-// lu mau ngapain idiot? mau nyolong kah? dasar makhluk rendahan, sampah lu, gk bisa ngoding jangan nyolong cil belajar dulu sana tolol
-const o=U;function Y(){const H=['upload','http://api','37.36','image','cnt','tJsKC','KfrHe','qMYYB','rm-urlenco','@neoxr.js\x20','upload!','get','SPwgV','28wErlRP','net/v2/?te','cors','50658OFnucO','e\x20Safari/5','wNlDP','toString','set-cookie','image.','*/*','append','xlkWy','https://si','IoZKx','hWUrz','en-US,enq=','ALmAV','&key=','385dxPRgG','eCSER','lqspS','qVDMY','optimized_','IbVaN','AWeUI','WebKit/537','Android\x206.','CBxGA','dYJTx','/92.0.4515','undefined','QmKrz','legra.ph','UVcWC','et=UTF-8','Ittyv','Android','ko)\x20Chrome','txt','auth_token','startsWith','load','file','tNEks','jFYjx','uNIjE','@neoxr/hel','YtCvO','uvzXw','hmkOm','PcpWO','AdbLy','strict-ori','pload','https://te','log','XSCAz','.webp','simsimiV2','yIcPj','jyUsL','mengerti','headers','NgzlV','https://ti','https://ap','rUYyh','TlzxS','jaQxo','UfOdN','per','gin-when-c','node-fetch','jsWGi','WsXes','1qNaqoo','pevsN','\x22Not=A?Bra','xUAQC','uploadImag','Mozilla/5.','dTFzU','&uid=neoxr','OJMlF','TZWFG','same-origi','qhlVb','exports','290858jVZlhH','Xifeg','PTSnW','source','TXZbN','Upload!','join','IjNWN','mcwoK','cJEBt','EgbAF','POST','sqADu','le.io/','eV2','eb/simtalk','match','zzudin','Uljur','WWypF','xGDzG','PmaUP','FSkUk','gfQtE','0.1;\x20SM-J5','JkbVn','zyVrA','aYqPf','Aku\x20tidak\x20','ipcIw','VsYbG','status_cod','&lc=id','ZLFMX','Ogrnf','swgyy','IVzhk','KJFZG','jHpTr','AUkLB','post','UiwNR','convert!','form-data','uest','4816328sEyZar','cTQww','bIdks','jmBDV','137988xxizZp','timestamp','uOkun','ny-img.com','wPUXN','https://im','ENDUp','84dhmIZl','message','zGGyS','ucGWh','kaHPZ','type','0\x20(Linux;\x20','applicatio','uxRPw','–\x20Wildan\x20I','from','status','msimi.vn/w','\x22Chromium\x22','BqQPe','file-type',';v=\x22107\x22,\x20','Failed\x20to\x20','ayLIN','KGWVi','success','yQzYh','0.9','pceFA','/webp/','cgHiu','cGrQs','getHeaders','HBYWR','uploadFile','/app/webp-','mvbFb','toJpg','gbb.com/up','arraybuffe','1599587FGwfTO','text=','rERfh','length','KFuva','src','substring','axios','i.simsimi.','Rihmw','ntmAG','.brainshop','chatAI','ross-origi','n/x-www-fo','data','nd\x22;v=\x2224\x22','xiphO','files/','SRCJD','uWrEb','WEbSq','aUASP','gbb.com/js','https://fi','MbxyN','simsimi','traeg','http','XalJD','2413250WxWaTO','ded;\x20chars','&lc=','CMjzi','.ai/get?bi','XMLHttpReq','random','cSuXz','eV3','TUsxi','image_url','GoogleBot','xt=','display_ur','SsMgO','rvXwF','Mnbym','goalF','.131\x20Mobil','.36\x20(KHTML','isBuffer','msimi.net/','XFUPn','330710gIWXeV','action','MeGrH','dCQfj','36OmQcSg','RSAXK','empty','legra.ph/u','alFrE','auhjD','iknGT','&msg=','json','shorten','gbb.com',',\x20like\x20Gec','00G)\x20Apple'];Y=function(){return H;};return Y();}(function(j,q){const I=U,f=j();while(!![]){try{const L=-parseInt(I(0x18f))/(-0x77d+-0x2280+-0xa*-0x433)*(-parseInt(I(0x19c))/(-0xe5*-0xb+0x1a01+-0x42*0x8b))+parseInt(I(0x1cd))/(-0xd95+-0x449*-0x1+0x94f)*(-parseInt(I(0x144))/(0x16*0x100+-0x172*0x1+-0xa45*0x2))+-parseInt(I(0x156))/(0x202e+0x6bf*0x2+-0x1*0x2da7)*(-parseInt(I(0x147))/(-0x473+-0x3*0xb6f+0x26c6))+-parseInt(I(0x10f))/(0x2170+0x1163+-0x32cc)+-parseInt(I(0x1c9))/(0x5e*-0x13+0x1*0xde6+-0x6e4)+parseInt(I(0x12a))/(0x1*0x143f+0x2*-0xbaf+0x328)*(-parseInt(I(0x126))/(0x1c2b+0x1*0x1fbd+0x4f*-0xc2))+parseInt(I(0xf1))/(0x1*0x1ab5+-0x57d*-0x6+-0x1*0x3b98)*(parseInt(I(0xce))/(-0x6c3+0x629+0x53*0x2));if(L===q)break;else f['push'](f['shift']());}catch(J){f['push'](f['shift']());}}}(Y,-0xa6bc0+0x8c7bf*-0x1+0x1*0x197e7b));const axios=require(o(0xf8)),fetch=require(o(0x18c)),FormData=require(o(0x1c7)),{fromBuffer}=require(o(0xdd)),creator=o(0x140)+o(0xd7)+o(0x1ad),{upload,short}=require(o(0x172)+o(0x18a));function U(j,q){const f=Y();return U=function(L,J){L=L-(0x23bf*-0x1+0x241*-0x9+0x38d1);let W=f[L];return W;},U(j,q);}module[o(0x19b)]=class Scraper{[o(0xfd)]=(j,q,f)=>new Promise(async L=>{const X=o,J={'uOkun':function(W,D){return W+D;},'mvbFb':function(W,D){return W+D;},'jFYjx':function(W,D){return W+D;},'PTSnW':X(0x138)+X(0xfc)+X(0x113)+'d=','dYJTx':X(0x155),'MeGrH':X(0x196)+X(0x131),'alFrE':function(W,D){return W(D);},'RSAXK':function(W,D){return W==D;},'IVzhk':X(0x162),'KJFZG':function(W,D){return W(D);},'ZLFMX':function(W,D){return W(D);}};try{const W=await(await axios[X(0x142)](J[X(0xc9)](J[X(0xc9)](J[X(0xed)](J[X(0x170)](J[X(0x170)](J[X(0x19e)],j),J[X(0x160)]),q),J[X(0x128)]),J[X(0x12e)](encodeURI,f))))[X(0x100)];if(J[X(0x12b)](typeof W[X(0x13b)],J[X(0x1c0)]))return J[X(0x1c1)](L,{'creator':creator,'status':![]});J[X(0x12e)](L,{'cretor':creator,'status':!![],'msg':W[X(0x13b)]});}catch(D){return console[X(0x17b)](D),J[X(0x1bd)](L,{'creator':creator,'status':![]});}});[o(0x10b)]=(j,q='id')=>{const R=o,f={'zyVrA':R(0x150)+R(0xda)+R(0x1ab),'ayLIN':function(L,J){return L(J);},'ntmAG':R(0x14d),'kaHPZ':R(0xd5)+R(0xff)+R(0x13f)+R(0x110)+R(0x166),'CBxGA':R(0x150)+R(0x124),'uxRPw':R(0x194)+R(0xd4)+R(0x15e)+R(0x1b4)+R(0x136)+R(0x15d)+R(0x122)+R(0x135)+R(0x169)+R(0x161)+R(0x121)+R(0x148)+R(0x139),'qVDMY':R(0x1b8)+R(0x181),'jyUsL':function(L,J){return L(J);},'pceFA':function(L,J){return L(J);},'bIdks':function(L,J){return L(J);}};return new Promise(async L=>{const F=R;try{let J=await(await axios[F(0x1c4)](f[F(0x1b6)],F(0xf2)+f[F(0xe0)](encodeURI,j)+F(0x111)+q,{'headers':{'Accept':f[F(0xfb)],'Content-Type':f[F(0xd2)],'Referer':f[F(0x15f)],'User-Agent':f[F(0xd6)]}}))[F(0x100)];if(J[F(0xe2)][F(0x1ac)](new RegExp(f[F(0x159)],'g')))return f[F(0x180)](L,{'creator':creator,'status':![]});f[F(0xe5)](L,{'cretor':creator,'status':!![],'msg':J[F(0xe2)]});}catch(W){return console[F(0x17b)](W),f[F(0x1cb)](L,{'creator':creator,'status':![]});}});};[o(0x17e)]=j=>{const P=o,q={'xlkWy':function(f,L){return f+L;},'gfQtE':function(f,L){return f+L;},'cTQww':P(0x185)+P(0xf9)+P(0x145)+P(0x11b),'PcpWO':function(f,L){return f(L);},'jmBDV':P(0x1bc),'iknGT':P(0x1b8)+P(0x181),'traeg':function(f,L){return f(L);}};return new Promise(async f=>{const l=P;try{let L=await(await axios[l(0x142)](q[l(0x14f)](q[l(0x1b3)](q[l(0x1ca)],q[l(0x176)](encodeURI,j)),q[l(0x1cc)])))[l(0x100)];if(L[l(0xe2)][l(0x1ac)](new RegExp(q[l(0x130)],'g')))return q[l(0x10c)](f,{'creator':creator,'status':![]});q[l(0x10c)](f,{'cretor':creator,'status':!![],'msg':L[l(0xe2)]});}catch(J){return console[l(0x17b)](J),q[l(0x10c)](f,{'creator':creator,'status':![]});}});};[o(0x133)]=j=>{const q={'rvXwF':function(f,L){return f(L);},'tJsKC':function(f,L){return f(L);},'AWeUI':function(f,L){return f(L);}};return new Promise(async f=>{const V=U;try{const L=await q[V(0x11e)](short,j);q[V(0x13c)](f,L);}catch(J){console[V(0x17b)](J),q[V(0x15c)](f,{'creator':creator,'status':![],'msg':J[V(0xcf)]});}});};[o(0x193)+'e']=j=>{const t=o,q={'dTFzU':t(0xcc)+t(0x134),'AdbLy':t(0x194)+t(0xd4)+t(0x15e)+t(0x1b4)+t(0x136)+t(0x15d)+t(0x122)+t(0x135)+t(0x169)+t(0x161)+t(0x121)+t(0x148)+t(0x139),'AUkLB':t(0x14b),'Ittyv':t(0x10d),'jHpTr':t(0xf0)+'r','KGWVi':function(f,L){return f(L);},'ucGWh':t(0x19f),'wPUXN':function(f,L){return f+L;},'HBYWR':t(0x14c),'Mnbym':t(0xd3),'wNlDP':t(0x16e),'uvzXw':t(0x127),'NgzlV':t(0x137),'Xifeg':t(0x1ce),'IoZKx':function(f,L){return f*L;},'Rihmw':t(0x16b),'tNEks':t(0xcc)+t(0x108)+'on','cJEBt':t(0x14d),'yQzYh':t(0xcc)+t(0xef)+t(0x16d),'lqspS':t(0x178)+t(0x18b)+t(0xfe)+'n','PmaUP':function(f,L){return f!=L;},'jaQxo':function(f,L){return f(L);}};return new Promise(async f=>{const r=t;try{const L=await await axios[r(0x142)](q[r(0x195)],{'headers':{'User-Agent':q[r(0x177)]}}),J=L[r(0x100)][r(0x1ac)](/PF\.obj\.config\.auth_token="([^"]*)/)[-0x23ef*0x1+0x10b7*-0x1+0x34a7],W=L[r(0x182)][q[r(0x1c3)]][r(0x1a2)](',\x20'),D=Buffer[r(0x123)](j)?j:j[r(0x16c)](q[r(0x167)])?await(await axios[r(0x142)](j,{'responseType':q[r(0x1c2)]}))[r(0x100)]:j,{ext:x}=await q[r(0xe1)](fromBuffer,Buffer[r(0xd8)](D));let b=new FormData();b[r(0x14e)](q[r(0xd1)],Buffer[r(0xd8)](D),q[r(0xcb)](q[r(0xea)],x)),b[r(0x14e)](q[r(0x11f)],q[r(0x149)]),b[r(0x14e)](q[r(0x174)],q[r(0x183)]),b[r(0x14e)](q[r(0x19d)],q[r(0x151)](new Date(),-0x16*-0x143+0x2146+-0x1*0x3d07)),b[r(0x14e)](q[r(0xfa)],J);const w=await(await axios[r(0x1c4)](q[r(0x16f)],b,{'headers':{'Accept':q[r(0x1a5)],'User-Agent':q[r(0x177)],'Origin':q[r(0x195)],'Referer':q[r(0xe3)],'Referrer-Policy':q[r(0x158)],'cookie':W,...b[r(0xe9)]()}}))[r(0x100)];if(q[r(0x1b1)](w[r(0x1bb)+'e'],-0x64c+-0x79*0x3b+0x22f7))return q[r(0xe1)](f,{'creator':creator,'status':![],'msg':r(0xdf)+r(0x1a1)});q[r(0x188)](f,{'creator':creator,'status':!![],'original':w,'data':{'url':w[r(0x13a)][r(0x11c)+'l']}});}catch(h){console[r(0x17b)](h),q[r(0xe1)](f,{'creator':creator,'status':![],'msg':h[r(0xcf)]});}});};[o(0x193)+o(0x1aa)]=j=>{const q={'ENDUp':function(f,L){return f(L);},'BqQPe':function(f,L){return f(L);}};return new Promise(async(f,L)=>{const m=U;try{const J=await q[m(0xcd)](upload,j);q[m(0xdc)](f,J);}catch(W){return console[m(0x17b)](W),q[m(0xdc)](f,{'creator':creator,'status':![],'msg':W[m(0xcf)]});}});};[o(0x193)+o(0x117)]=async j=>{const M=o,q={'xGDzG':M(0x10d),'IjNWN':M(0xf0)+'r','IbVaN':function(f,L){return f(L);},'TUsxi':M(0x16e),'ALmAV':function(f,L){return f+L;},'XFUPn':M(0x14c),'ipcIw':M(0x17a)+M(0x12d)+M(0x179),'TXZbN':M(0x14d),'XSCAz':M(0x194)+M(0xd4)+M(0x15e)+M(0x1b4)+M(0x136)+M(0x15d)+M(0x122)+M(0x135)+M(0x169)+M(0x161)+M(0x121)+M(0x148)+M(0x139),'WWypF':M(0x17a)+M(0x164),'aYqPf':M(0x178)+M(0x18b)+M(0xfe)+'n','WEbSq':M(0xdb)+M(0xde)+M(0x191)+M(0x101),'rUYyh':M(0x168),'VsYbG':M(0x12c),'yIcPj':M(0x146),'qMYYB':M(0x199)+'n','jsWGi':M(0x114)+M(0x1c8),'MbxyN':function(f,L){return f<L;},'TlzxS':M(0xdf)+M(0x141),'hmkOm':function(f,L){return f+L;},'JkbVn':function(f,L){return f(L);}};return new Promise(async f=>{const n=M;try{const L=Buffer[n(0x123)](j)?j:j[n(0x16c)](q[n(0x1b0)])?await(await axios[n(0x142)](j,{'responseType':q[n(0x1a3)]}))[n(0x100)]:j,{ext:J}=await q[n(0x15b)](fromBuffer,L);let W=new FormData();W[n(0x14e)](q[n(0x118)],Buffer[n(0xd8)](L),q[n(0x154)](q[n(0x125)],J));const D=await(await axios[n(0x1c4)](q[n(0x1b9)],W,{'headers':{'Accept':q[n(0x1a0)],'User-Agent':q[n(0x17c)],'Origin':q[n(0x1af)],'Referer':q[n(0x1af)],'Referrer-Policy':q[n(0x1b7)],'sec-ch-ua':q[n(0x106)],'sec-ch-ua-platform':q[n(0x186)],'sec-fetch-dest':q[n(0x1ba)],'sec-fetch-mode':q[n(0x17f)],'sec-fetch-site':q[n(0x13e)],'x-requested-with':q[n(0x18d)],...W[n(0xe9)]()}}))[n(0x100)];if(!D||q[n(0x10a)](D[n(0xf4)],0x2699*0x1+-0x973+0x9b7*-0x3))return q[n(0x15b)](f,{'creator':creator,'status':![],'msg':q[n(0x187)]});q[n(0x15b)](f,{'creator':creator,'status':!![],'data':{'url':q[n(0x175)](q[n(0x1af)],D[-0xac*0x12+-0x38d+0xfa5][n(0xf6)])}});}catch(x){q[n(0x1b5)](f,{'creator':creator,'status':![],'msg':x[n(0xcf)]});}});};[o(0xeb)]=(j,q)=>{const f={'xUAQC':function(L,J,W){return L(J,W);},'UiwNR':function(L,J){return L(J);}};return new Promise(async(L,J)=>{const c=U;try{const W=await f[c(0x192)](upload,j,q);f[c(0x1c5)](L,W);}catch(D){return console[c(0x17b)](D),f[c(0x1c5)](L,{'creator':creator,'status':![],'msg':D[c(0xcf)]});}});};[o(0xeb)+'V2']=(j,q)=>{const O=o,f={'aUASP':function(L,J){return L(J);},'Ogrnf':function(L,J){return L==J;},'XalJD':O(0x162),'zGGyS':O(0x16a),'cgHiu':O(0x16e),'WsXes':function(L,J){return L+J;},'KFuva':function(L,J){return L+J;},'cSuXz':function(L,J,W){return L(J,W);},'auhjD':O(0x109)+O(0x1a9),'rERfh':O(0x1a7),'Uljur':O(0x14d),'TZWFG':O(0x153)+O(0xe4),'KfrHe':O(0x11a)};return new Promise(async L=>{const T=O;try{if(!Buffer[T(0x123)](j))return f[T(0x107)](L,{'status':![]});let {ext:J}=await f[T(0x107)](fromBuffer,j)||{},W=f[T(0x1be)](typeof J,f[T(0x10e)])?f[T(0xd0)]:J,D=new FormData();D[T(0x14e)](f[T(0xe7)],j,f[T(0x18e)](f[T(0xf5)](q,'.'),W));const x=await(await f[T(0x116)](fetch,f[T(0x12f)],{'method':f[T(0xf3)],'headers':{'Accept':f[T(0x1ae)],'Accept-Language':f[T(0x198)],'User-Agent':f[T(0x13d)]},'body':D}))[T(0x132)]();if(!x[T(0xe2)])return f[T(0x107)](L,{'creator':creator,'status':![]});delete x[T(0xe2)],delete x[T(0xd9)],f[T(0x107)](L,{'creator':creator,'status':!![],'data':x});}catch(b){f[T(0x107)](L,{'creator':creator,'status':![]});}});};[o(0xee)]=async j=>{const g=o,q={'SPwgV':g(0x184)+g(0xca)+g(0xe6),'sqADu':g(0x14b),'uWrEb':g(0x10d),'goalF':g(0xf0)+'r','YtCvO':g(0x16e),'FSkUk':function(f,L){return f+L;},'hWUrz':function(f,L){return f+L;},'UVcWC':g(0x17d),'CMjzi':g(0x184)+g(0xca)+g(0xec)+g(0x103),'cGrQs':g(0x14d),'QmKrz':g(0x194)+g(0xd4)+g(0x15e)+g(0x1b4)+g(0x136)+g(0x15d)+g(0x122)+g(0x135)+g(0x169)+g(0x161)+g(0x121)+g(0x148)+g(0x139),'uNIjE':g(0x184)+g(0xca)+'/','qhlVb':g(0x184)+g(0xca),'UfOdN':g(0x178)+g(0x18b)+g(0xfe)+'n','dCQfj':g(0xdb)+g(0xde)+g(0x191)+g(0x101),'OJMlF':g(0x168),'SRCJD':g(0x12c),'pevsN':g(0x146),'mcwoK':g(0x199)+'n','swgyy':g(0x114)+g(0x1c8),'EgbAF':function(f,L){return f(L);},'SsMgO':g(0xdf)+g(0x1c6),'eCSER':function(f,L){return f(L);},'xiphO':function(f,L){return f(L);}};return new Promise(async f=>{const B=g;try{const L=await await axios[B(0x142)](q[B(0x143)]),J=L[B(0x182)][q[B(0x1a8)]][B(0x1a2)](';\x20'),W=Buffer[B(0x123)](j)?j:j[B(0x16c)](q[B(0x105)])?await(await axios[B(0x142)](j,{'responseType':q[B(0x120)]}))[B(0x100)]:j;let D=new FormData();D[B(0x14e)](q[B(0x173)],Buffer[B(0xd8)](W),q[B(0x1b2)](q[B(0x152)](Math[B(0x115)](),-0x1c78+0x2c7+0xb*0x256)[B(0x14a)](0x2586+-0x1a37+0xb2b*-0x1)[B(0xf7)](-0x47*-0x49+0x944+-0x1d7c),q[B(0x165)]));const x=await(await axios[B(0x1c4)](q[B(0x112)],D,{'headers':{'Accept':q[B(0xe8)],'User-Agent':q[B(0x163)],'Origin':q[B(0x171)],'Referer':q[B(0x19a)],'Referrer-Policy':q[B(0x189)],'sec-ch-ua':q[B(0x129)],'sec-ch-ua-platform':q[B(0x197)],'sec-fetch-dest':q[B(0x104)],'sec-fetch-mode':q[B(0x190)],'sec-fetch-site':q[B(0x1a4)],'cookie':J,...D[B(0xe9)](),'x-requested-with':q[B(0x1bf)]}}))[B(0x100)];if(!x[B(0xe2)])return q[B(0x1a6)](f,{'creator':creator,'status':![],'msg':q[B(0x11d)]});q[B(0x157)](f,{'creator':creator,'status':!![],'data':{'url':x[B(0x15a)+B(0x119)]}});}catch(b){console[B(0x17b)](b),q[B(0x102)](f,{'creator':creator,'status':![],'msg':b[B(0xcf)]});}});};};
+const axios = require('axios')
+const fetch = require('node-fetch')
+const FormData = require('form-data')
+const { fromBuffer } = require('file-type')
+const creator = `@neoxr.js – Wildan Izzudin`
+const { upload, short } = require('@neoxr/helper')
+
+module.exports = class Scraper {
+   /* Chat AI
+    * @param {String} bid
+    * @param {String} key
+    * @param {String} text
+    */
+   chatAI = (bid, key, text) => new Promise(async (resolve) => {
+      try {
+         const json = await (await axios.get('http://api.brainshop.ai/get?bid=' + bid + '&key=' + key + '&uid=neoxr&msg=' + encodeURI(text))).data
+         if (typeof json.cnt == 'undefined') return resolve({
+            creator: creator,
+            status: false
+         })
+         resolve({
+            cretor: creator,
+            status: true,
+            msg: json.cnt
+         })
+      } catch (e) {
+         console.log(e)
+         return resolve({
+            creator: creator,
+            status: false
+         })
+      }
+   })
+
+   /* Simsimi Chat
+    * @param {String} text
+    */
+   simsimi = (text, lang = 'id') => {
+      return new Promise(async (resolve) => {
+         try {
+            let json = await (await axios.post('https://simsimi.vn/web/simtalk', `text=${encodeURI(text)}&lc=${lang}`, {
+               headers: {
+                  'Accept': '*/*',
+                  'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                  'Referer': 'https://simsimi.net/',
+                  'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0.1; SM-J500G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Mobile Safari/537.36'
+               }
+            })).data
+            if (json.success.match(new RegExp('Aku tidak mengerti', 'g'))) return resolve({
+               creator: creator,
+               status: false
+            })
+            resolve({
+               cretor: creator,
+               status: true,
+               msg: json.success
+            })
+         } catch (e) {
+            console.log(e)
+            return resolve({
+               creator: creator,
+               status: false
+            })
+         }
+      })
+   }
+
+   /* Simsimi Chat V2
+    * @param {String} text
+    */
+   simsimiV2 = (text) => {
+      return new Promise(async (resolve) => {
+         try { // https://simsimi.net/ & https://simsimi.info
+            let json = await (await axios.get('https://api.simsimi.net/v2/?text=' + encodeURI(text) + '&lc=id')).data
+            if (json.success.match(new RegExp('Aku tidak mengerti', 'g'))) return resolve({
+               creator: creator,
+               status: false
+            })
+            resolve({
+               cretor: creator,
+               status: true,
+               msg: json.success
+            })
+         } catch (e) {
+            console.log(e)
+            return resolve({
+               creator: creator,
+               status: false
+            })
+         }
+      })
+   }
+
+   /* URL Shortener
+    * @param {String} url
+    */
+   shorten = (url) => {
+      return new Promise(async (resolve) => {
+         try {
+            const json = await short(url)
+            resolve(json)
+         } catch (e) {
+            console.log(e)
+            resolve({
+               creator: creator,
+               status: false,
+               msg: e.message
+            })
+         }
+      })
+   }
+
+   /* Image Uploader (freeimage.host) [Permanent]
+    * @param {Buffer} buffer
+    */
+   uploadImage = (str) => {
+      return new Promise(async resolve => {
+         try {
+            const parse = await (await axios.get('https://imgbb.com', {
+               headers: {
+                  "User-Agent": "Mozilla/5.0 (Linux; Android 6.0.1; SM-J500G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Mobile Safari/537.36"
+               }
+            }))
+            const token = parse.data.match(/PF\.obj\.config\.auth_token="([^"]*)/)[1]
+            const cookie = parse.headers['set-cookie'].join(', ')
+            const file = Buffer.isBuffer(str) ? str : str.startsWith('http') ? await (await axios.get(str, {
+               responseType: 'arraybuffer'
+            })).data : str
+            const { ext } = await fromBuffer(Buffer.from(file))
+            let form = new FormData
+            form.append('source', Buffer.from(file), 'image.' + ext)
+            form.append('type', 'file')
+            form.append('action', 'upload')
+            form.append('timestamp', (new Date() * 1))
+            form.append('auth_token', token)
+            const json = await (await axios.post('https://imgbb.com/json', form, {
+               headers: {
+                  "Accept": "*/*",
+                  "User-Agent": "Mozilla/5.0 (Linux; Android 6.0.1; SM-J500G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Mobile Safari/537.36",
+                  "Origin": "https://imgbb.com",
+                  "Referer": "https://imgbb.com/upload",
+                  "Referrer-Policy": "strict-origin-when-cross-origin",
+                  cookie,
+                  ...form.getHeaders()
+               }
+            })).data
+            if (json.status_code != 200) return resolve({
+               creator: creator,
+               status: false,
+               msg: `Failed to Upload!`
+            })
+            resolve({
+               creator: creator,
+               status: true,
+               original: json,
+               data: {
+                  url: json.image.display_url
+               }
+            })
+         } catch (e) {
+            console.log(e)
+            resolve({
+               creator: creator,
+               status: false,
+               msg: e.message
+            })
+         }
+      })
+   }
+
+   /* Image Uploader V2 (707a8191-3fe9-4568-a03e-763edd45f0bb.id.repl.co) [Temp]
+    * @param {Buffer} buffer
+    */
+   uploadImageV2 = (buffer) => {
+      return new Promise(async (resolve, reject) => {
+         try {
+            const json = await upload(buffer)
+            resolve(json)
+         } catch (e) {
+            console.log(e)
+            return resolve({
+               creator: creator,
+               status: false,
+               msg: e.message
+            })
+         }
+      })
+   }
+
+   /* Image Uploader (telegra.ph)
+    * @param {Buffer} buffer
+    */
+   uploadImageV3 = async (str) => {
+      return new Promise(async resolve => {
+         try {
+            const image = Buffer.isBuffer(str) ? str : str.startsWith('http') ? await (await axios.get(str, {
+               responseType: 'arraybuffer'
+            })).data : str
+            const {
+               ext
+            } = await fromBuffer(image)
+            let form = new FormData
+            form.append('file', Buffer.from(image), 'image.' + ext)
+            const json = await (await axios.post('https://telegra.ph/upload', form, {
+               headers: {
+                  "Accept": "*/*",
+                  "User-Agent": "Mozilla/5.0 (Linux; Android 6.0.1; SM-J500G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Mobile Safari/537.36",
+                  "Origin": "https://telegra.ph",
+                  "Referer": "https://telegra.ph",
+                  "Referrer-Policy": "strict-origin-when-cross-origin",
+                  "sec-ch-ua": '"Chromium";v="107", "Not=A?Brand";v="24"',
+                  "sec-ch-ua-platform": "Android",
+                  "sec-fetch-dest": "empty",
+                  "sec-fetch-mode": "cors",
+                  "sec-fetch-site": "same-origin",
+                  "x-requested-with": "XMLHttpRequest",
+                  ...form.getHeaders()
+               }
+            })).data
+            if (!json || json.length < 1) return resolve({
+               creator: creator,
+               status: false,
+               msg: 'Failed to upload!'
+            })
+            resolve({
+               creator: creator,
+               status: true,
+               data: {
+                  url: 'https://telegra.ph' + json[0].src
+               }
+            })
+         } catch (e) {
+            // console.log(e)
+            resolve({
+               creator: creator,
+               status: false,
+               msg: e.message
+            })
+         }
+      })
+   }
+
+   /* File Uploader (707a8191-3fe9-4568-a03e-763edd45f0bb.id.repl.co) [Permanent]
+    * @param {Buffer} buffer
+    */
+   uploadFile = (buffer, extention) => {
+      return new Promise(async (resolve, reject) => {
+         try {
+            const json = await upload(buffer, extention)
+            resolve(json)
+         } catch (e) {
+            console.log(e)
+            return resolve({
+               creator: creator,
+               status: false,
+               msg: e.message
+            })
+         }
+      })
+   }
+
+   /* Temp File Upload (file.io)
+    * @param {Buffer} buffer
+    * @param {String} name
+    */
+   uploadFileV2 = (buffer, name) => {
+      return new Promise(async (resolve) => {
+         try {
+            if (!Buffer.isBuffer(buffer)) return resolve({
+               status: false
+            })
+            let {
+               ext
+            } = await fromBuffer(buffer) || {}
+            let extention = (typeof ext == 'undefined') ? 'txt' : ext
+            let form = new FormData
+            form.append('file', buffer, name + '.' + extention)
+            const json = await (await fetch('https://file.io/', {
+               method: 'POST',
+               headers: {
+                  Accept: '*/*',
+                  'Accept-Language': 'en-US,enq=0.9',
+                  'User-Agent': 'GoogleBot'
+               },
+               body: form
+            })).json()
+            if (!json.success) return resolve({
+               creator: creator,
+               status: false
+            })
+            delete json.success
+            delete json.status
+            resolve({
+               creator: creator,
+               status: true,
+               data: json
+            })
+         } catch (e) {
+            resolve({
+               creator: creator,
+               status: false
+            })
+         }
+      })
+   }
+
+   /* To JPEG / JPG
+    * @param {String|Buffer} str
+    */
+   toJpg = async (str) => {
+      return new Promise(async resolve => {
+         try {
+            const parse = await (await axios.get('https://tiny-img.com/webp/'))
+            const cookie = parse.headers['set-cookie'].join('; ')
+            const image = Buffer.isBuffer(str) ? str : str.startsWith('http') ? await (await axios.get(str, {
+               responseType: 'arraybuffer'
+            })).data : str
+            let form = new FormData
+            form.append('file', Buffer.from(image), (Math.random() + 1).toString(36).substring(7) + '.webp')
+            const json = await (await axios.post('https://tiny-img.com/app/webp-files/', form, {
+               headers: {
+                  "Accept": "*/*",
+                  "User-Agent": "Mozilla/5.0 (Linux; Android 6.0.1; SM-J500G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Mobile Safari/537.36",
+                  "Origin": "https://tiny-img.com/",
+                  "Referer": "https://tiny-img.com",
+                  "Referrer-Policy": "strict-origin-when-cross-origin",
+                  "sec-ch-ua": '"Chromium";v="107", "Not=A?Brand";v="24"',
+                  "sec-ch-ua-platform": "Android",
+                  "sec-fetch-dest": "empty",
+                  "sec-fetch-mode": "cors",
+                  "sec-fetch-site": "same-origin",
+                  cookie,
+                  ...form.getHeaders(),
+                  "x-requested-with": "XMLHttpRequest"
+               }
+            })).data
+            if (!json.success) return resolve({
+               creator: creator,
+               status: false,
+               msg: 'Failed to convert!'
+            })
+            resolve({
+               creator: creator,
+               status: true,
+               data: {
+                  url: json.optimized_image_url
+               }
+            })
+         } catch (e) {
+            console.log(e)
+            resolve({
+               creator: creator,
+               status: false,
+               msg: e.message
+            })
+         }
+      })
+   }
+}
