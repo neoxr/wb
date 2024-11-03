@@ -1,12 +1,14 @@
 require('dotenv').config()
 const fs = require('fs')
+const Function = new (require('./Utils/Function'))
+const Scraper = new (require('./Utils/Scraper'))
 module.exports = class Component {
    Config = JSON.parse(fs.readFileSync('./config.json'))
    Client = require('./Utils/_Connection')
    Baileys = require('./Utils/Connection')
    Converter = new (require('./Utils/Converter'))
-   Function = new (require('./Utils/Function'))
-   Scraper = new (require('./Utils/Scraper'))
+   Function = Function
+   Scraper = Scraper
    Local = new(require('./Utils/Local'))
    MongoDB = /mongo/.test(process.env.DATABASE_URL) && process.env.DATABASE_URL ? new (require('./Utils/Mongo')) : false
    PostgreSQL = /postgres/.test(process.env.DATABASE_URL) && process.env.DATABASE_URL ? new (require('./Utils/Postgre')) : false
