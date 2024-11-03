@@ -4,7 +4,9 @@ const { Baileys } = new(require('@neoxr/wb'))
 const client = new Baileys({
    sf: 'session',
    online: true,
-   version: [2, 2318, 11]
+   version: [2, 2413, 51]
+}, {
+   browser: ['Ubuntu', 'Firefox', '20.0.00']
 })
 client.on('error', async error => console.log(error.message))
 client.on('ready', async () => {

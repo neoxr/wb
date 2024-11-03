@@ -12,6 +12,6 @@
   "dependencies": {
     "@adiwajshing/baileys": "npm:@neoxr/baileys",
     "@adiwajshing/keyed-db": "^0.2.4",
-    "@neoxr/wb": "^2.6.7"
+    "@neoxr/wb": "latest"
   }
 }
