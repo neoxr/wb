@@ -1,6 +1,6 @@
 {
    "name":"@neoxr/wb",
-   "version":"3.3.7",
+   "version":"4.0.0",
    "description":"Simplicity WhatsApp Bot (Baileys)",
    "main":"index.js",
    "engines": {
@@ -30,7 +30,7 @@
    "homepage":"https://github.com/neoxr/neoxr-bot#readme",
    "dependencies":{
       "@neoxr/api": "^1.5.3",
-      "@neoxr/helper": "^1.2.1",
+      "@neoxr/helper": "^1.2.2",
       "awesome-phonenumber":"~2.59.0",
       "axios":"~0.24.0",
       "beautify-console-log": "^1.3.12",
