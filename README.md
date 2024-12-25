@@ -254,5 +254,5 @@ client.sendCarousel(m.chat, cards, m, {
 })
 
 // send message with "AI" label (only work if your bot using WhatsApp Business)
-sock.sendFromAI(m.chat, 'Hi!' m)
+sock.sendFromAI(m.chat, 'Hi!', m)
 ```
