@@ -158,7 +158,7 @@ sock.sendContact(m.chat, [{
 // forward message
 sock.copyNForward(m.chat, m)
 
-// send button message (your own risk)
+// send interactive button message (your own risk)
 var buttons = [{
    name: "quick_reply",
    buttonParamsJson: JSON.stringify({
@@ -255,4 +255,36 @@ client.sendCarousel(m.chat, cards, m, {
 
 // send message with "AI" label (only work if your bot using WhatsApp Business)
 sock.sendFromAI(m.chat, 'Hi!', m)
+
+// send old button all type
+var buttons = [{
+   text: 'Runtime',
+   command: '.runtime'
+}, {
+   text: 'Statistic',
+   command: '.stat'
+}]
+
+// button text
+sock.replyButton(m.chat, buttons, m, {
+   text: 'Hi @0',
+   footer: global.footer // do not empty
+})
+
+// button image & video
+sock.replyButton(m.chat, buttons, m, {
+   text: 'Hi @0', // do not empty
+   footer: global.footer, // do not empty
+   media: global.db.setting.cover // video or image link
+})
+
+// button document
+sock.replyButton(m.chat, buttons, m, {
+   text: 'Hi @0', // do not empty
+   footer: global.footer, // do not empty
+   media: global.db.setting.cover // file link (all extension)
+   document: {
+      filename: 'neoxr.jpg'
+   }
+})
 ```
