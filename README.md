@@ -282,7 +282,7 @@ sock.replyButton(m.chat, buttons, m, {
 sock.replyButton(m.chat, buttons, m, {
    text: 'Hi @0', // do not empty
    footer: global.footer, // do not empty
-   media: global.db.setting.cover // file link (all extension)
+   media: global.db.setting.cover, // file link (all extension)
    document: {
       filename: 'neoxr.jpg'
    }
