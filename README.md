@@ -80,19 +80,19 @@ client.on('presence.update', ctx => console.log(ctx))
 const sock = client.sock
 
 // send a text message (auto tagged)
-sock.reply(m.chat, `Test!`, m)
+client.reply(m.chat, `Test!`, m)
 
 // send a react message
-sock.sendReact(m.chat, `💀`, m.key)
+client.sendReact(m.chat, `💀`, m.key)
 
 // send a text message with progress bar
-sock.sendProgress(m.chat, `Test!`, m)
+client.sendProgress(m.chat, `Test!`, m)
 
 // send a ptv message from path, url, or buffer (video duration 10s)
-sock.sendPtv(m.chat, `./media/video/yemete.mp4`)
+client.sendPtv(m.chat, `./media/video/yemete.mp4`)
 
 // send a text message with custom thumbnail
-sock.sendMessageModify(m.chat, `Test!`, m, {
+client.sendMessageModify(m.chat, `Test!`, m, {
    title: '© neoxr-bot',
    largeThumb: true,
    ads: false,
@@ -102,7 +102,7 @@ sock.sendMessageModify(m.chat, `Test!`, m, {
 })
 
 // send a text message with custom thumbnail & fake quoted
-sock.sendMessageModifyV2(m.chat, `Test!`, '© neoxr-bot', {
+client.sendMessageModifyV2(m.chat, `Test!`, '© neoxr-bot', {
    title: '© neoxr-bot',
    largeThumb: true,
    ads: false,
@@ -112,40 +112,40 @@ sock.sendMessageModifyV2(m.chat, `Test!`, '© neoxr-bot', {
 })
 
 // send a text message with fake quoted
-sock.sendMessageVerify(m.chat, `Test!`, '© neoxr-bot')
+client.sendMessageVerify(m.chat, `Test!`, '© neoxr-bot')
 
 // send a file from path, url, or buffer (auto extension)
-sock.sendFile(m.chat, 'https://iili.io/HP3ODj2.jpg', 'image.jpg', 'Test!', m)
+client.sendFile(m.chat, 'https://iili.io/HP3ODj2.jpg', 'image.jpg', 'Test!', m)
 
 // send a document from path, url, or buffer (auto extension)
-sock.sendFile(m.chat, 'https://iili.io/HP3ODj2.jpg', 'image.jpg', 'Test!', m, {
+client.sendFile(m.chat, 'https://iili.io/HP3ODj2.jpg', 'image.jpg', 'Test!', m, {
    document: true
 })
 
 // send a voicenote from path, url, or buffer
-sock.sendFile(m.chat, './media/audio/ah.mp3', '', '', m, {
+client.sendFile(m.chat, './media/audio/ah.mp3', '', '', m, {
    ptt: true
 })
 
 // send a audio from path, url, or buffer with thumbnail in audio tag
-sock.sendFile(m.chat, './media/audio/ah.mp3', '', '', m, {
+client.sendFile(m.chat, './media/audio/ah.mp3', '', '', m, {
    APIC: < Buffer >
 })
 
 // send a sticker message from url or buffer
-sock.sendSticker(m.chat, 'https://iili.io/HP3ODj2.jpg', m, {
+client.sendSticker(m.chat, 'https://iili.io/HP3ODj2.jpg', m, {
    packname: 'Sticker by',
    author: '© neoxr.js'
 })
 
 // send polling message
-sock.sendPoll(m.chat, 'Do you like this library ?', {
+client.sendPoll(m.chat, 'Do you like this library ?', {
    options: ['Yes', 'No'],
    multiselect: false
 })
 
 // send contact message
-sock.sendContact(m.chat, [{
+client.sendContact(m.chat, [{
    name: 'Wildan Izzudin',
    number: '6285887776722',
    about: 'Owner & Creator'
@@ -156,7 +156,7 @@ sock.sendContact(m.chat, [{
 })
 
 // forward message
-sock.copyNForward(m.chat, m)
+client.copyNForward(m.chat, m)
 
 // send interactive button message (your own risk)
 var buttons = [{
@@ -254,7 +254,7 @@ client.sendCarousel(m.chat, cards, m, {
 })
 
 // send message with "AI" label (only work if your bot using WhatsApp Business)
-sock.sendFromAI(m.chat, 'Hi!', m)
+client.sendFromAI(m.chat, 'Hi!', m)
 
 // send old button all type
 var buttons = [{
@@ -266,25 +266,42 @@ var buttons = [{
 }]
 
 // button text
-sock.replyButton(m.chat, buttons, m, {
+client.replyButton(m.chat, buttons, m, {
    text: 'Hi @0',
    footer: global.footer // do not empty
 })
 
 // button image & video
-sock.replyButton(m.chat, buttons, m, {
+client.replyButton(m.chat, buttons, m, {
    text: 'Hi @0', // do not empty
    footer: global.footer, // do not empty
    media: global.db.setting.cover // video or image link
 })
 
 // button document
-sock.replyButton(m.chat, buttons, m, {
+client.replyButton(m.chat, buttons, m, {
    text: 'Hi @0', // do not empty
    footer: global.footer, // do not empty
    media: global.db.setting.cover, // file link (all extension)
    document: {
       filename: 'neoxr.jpg'
    }
+})
+
+// old button + native flow
+client.replyButton(m.chat, [{
+   text: 'Runtime',
+   command: '.runtime'
+}, {
+   name: 'cta_url',
+   param: {
+      display_text: "Rest API",
+      url: "https://api.neoxr.my.id",
+      merchant_url: "https://api.neoxr.my.id"
+   }
+}], m, {
+   text: 'Hi @0', // do not empty
+   footer: global.footer, // do not empty
+   media: global.db.setting.cover // video or image link
 })
 ```
