@@ -77,7 +77,7 @@ client.on('presence.update', ctx => console.log(ctx))
 
 ```Javascript
 // declaration variable sock
-const sock = client.sock
+const client = waSocket.sock
 
 // send a text message (auto tagged)
 client.reply(m.chat, `Test!`, m)
