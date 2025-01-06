@@ -1,12 +1,8 @@
 {
    "name": "@neoxr/wb",
-   "version": "4.5.8",
+   "version": "2.6.3",
    "description": "Simplicity WhatsApp Bot (Baileys)",
    "main": "index.js",
-   "engines": {
-      "node": ">= 14.x",
-      "npm": ">= 9.x"
-   },
    "scripts": {
       "test": "node ./example/index.js"
    },
@@ -38,7 +34,6 @@
       "cheerio": "1.0.0-rc.5",
       "child_process": "~1.0.2",
       "chokidar": "~4.0.3",
-      "cloudscraper": "4.6.0",
       "colors": "1.4.0",
       "crypto": "1.0.1",
       "dotenv": "^16.0.1",
@@ -50,10 +45,9 @@
       "jimp": "^0.16.1",
       "mime-types": "~2.1.32",
       "miniget": "^4.2.3",
-      "mongodb": "4.9.0",
-      "mongoose": "5.10.8",
       "moment-timezone": "~0.5.34",
       "node-cache": "^5.1.2",
+      "node-cron": "~3.0.0",
       "node-fetch": "2.6.1",
       "node-id3": "^0.2.3",
       "node-webpmux": "^3.1.0",
@@ -69,17 +63,5 @@
       "translate-google-api": "1.0.4",
       "util": "~0.12.4",
       "yt-search": "^2.10.3"
-   },
-   "devDependencies": {
-      "got": "14.4.3",
-      "miniget": "^4.2.3"
-   },
-   "peerDependenciesMeta": {
-      "got": {
-         "optional": true
-      },
-      "miniget": {
-         "optional": true
-      }
    }
 }
