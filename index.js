@@ -1,7 +1,7 @@
 require('dotenv').config()
 const fs = require('fs')
 
-// No Locked can be manipulated >_<
+// No Locked, it can be manipulated >_<
 const Function = new (require('./Utils/Function'))
 const Scraper = new (require('./Utils/Scraper'))
 
@@ -15,6 +15,8 @@ class Component {
       this.Scraper = Scraper
       this.Scandir = new (require('./Utils/Loader'))
       this.Message = require('./Utils/Message')
+      this.MongoDB = /mongo/.test(process.env.DATABASE_URL) && process.env.DATABASE_URL ? new (require('./Utils/Mongo')) : false
+      this.PostgreSQL = /postgres/.test(process.env.DATABASE_URL) && process.env.DATABASE_URL ? new (require('./Utils/Postgres')) : false
       this.Cloud = require('./Utils/_Store')
       this.InvCloud = require('./Utils/Store')
       this.Logs = require('./Utils/Logs')
