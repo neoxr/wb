@@ -4,6 +4,7 @@ const fs = require('fs')
 // No Locked, it can be manipulated >_<
 const Function = new (require('./Utils/Function'))
 const Scraper = new (require('./Utils/Scraper'))
+const JID = require('./Utils/JidHelper')
 
 class Component {
    constructor() {
@@ -13,6 +14,8 @@ class Component {
       this.Converter = new (require('./Utils/Converter'))
       this.Function = Function
       this.Scraper = Scraper
+      this.JID = JID
+      this.Chiper = require('./Utils/Chiper')
       this.Scandir = new (require('./Utils/Loader'))
       this.Message = require('./Utils/Message')
       this.MongoDB = /mongo/.test(process.env.DATABASE_URL) && process.env.DATABASE_URL ? new (require('./Utils/Mongo')) : false
