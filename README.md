@@ -293,11 +293,20 @@ client.replyButton(m.chat, [{
    text: 'Runtime',
    command: '.runtime'
 }, {
-   name: 'cta_url',
+   name: 'single_select',
    param: {
-      display_text: "Rest API",
-      url: "https://api.neoxr.my.id",
-      merchant_url: "https://api.neoxr.my.id"
+      title: 'Tap!',
+      sections: [{
+         rows: [{
+            title: 'Runtime',
+            description: '---',
+            id: '.runtime'
+         }, {
+            title: 'Statistic',
+            description: '---',
+            id: '.stat'
+         }]
+      }]
    }
 }], m, {
    text: 'Hi @0', // do not empty
