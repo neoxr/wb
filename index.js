@@ -30,6 +30,7 @@ class Component {
       this.Spam = require('./Utils/Spam')
       this.Session = require('./Utils/Session')
       this.Connector = require('./Utils/Connector')
+      this.Caching = require('./Utils/Caching')
    }
 }
 
