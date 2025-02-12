@@ -8,7 +8,7 @@ const JID = require('./Utils/JidHelper')
 
 class Component {
    constructor() {
-      this.Config = JSON.parse(fs.readFileSync('./config.json'))
+      this.Config = fs.existsSync('./config.json') ? JSON.parse(fs.readFileSync('./config.json')) : {}
       this.Client = require('./Utils/_Connection')
       this.Baileys = require('./Utils/Connection')
       this.Converter = new (require('./Utils/Converter'))
