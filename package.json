@@ -30,6 +30,7 @@
 	"homepage": "https://github.com/neoxr/neoxr-bot#readme",
 	"dependencies": {
 		"@cacheable/node-cache": "^1.5.3",
+		"@database/local": "github:neoxr/database#local",
 		"@neoxr/api": "^1.5.3",
 		"@neoxr/helper": "^1.2.2",
 		"awesome-phonenumber": "~2.59.0",
