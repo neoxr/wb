@@ -1,0 +1,35 @@
+import 'dotenv/config';
+export { default as Baileys } from './Socket/connection';
+export { default as Client } from './Socket/_connection';
+export { default as Connector } from './Socket/connector';
+export { default as Store } from './Socket/store';
+export { default as _Store } from './Socket/_store';
+export { default as Function } from './Utils/functions';
+export { default as Scraper } from './Utils/scraper';
+export { default as Cooldown } from './Utils/cooldown';
+export { default as JID } from './Utils/jid-helper';
+export { default as Logs } from './Utils/logs';
+export { default as Converter } from './Utils/converter';
+export { default as Chiper } from './Utils/chiper';
+export { default as Caching } from './Utils/caching';
+export { default as Spam } from './Utils/spam';
+declare class Component {
+    private Config;
+    private Baileys;
+    private Client;
+    private Connector;
+    private Store;
+    private _Store;
+    private Function;
+    private Scraper;
+    private Cooldown;
+    private JID;
+    private Logs;
+    private Converter;
+    private Chiper;
+    private Caching;
+    private Spam;
+    private NeoxrApi;
+    constructor();
+}
+export { Component };

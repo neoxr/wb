@@ -1,0 +1,7 @@
+import Message from './message';
+declare class Serialize extends Message {
+    mention: (text: string) => string[];
+    bind(parent: any, m: any, bypassDisappearing?: boolean): any;
+}
+declare const _default: Serialize;
+export default _default;
