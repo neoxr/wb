@@ -30,6 +30,7 @@ declare class Component {
     private Caching;
     private Spam;
     private NeoxrApi;
+    private Version;
     constructor();
 }
 export { Component };
