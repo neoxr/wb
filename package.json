@@ -33,6 +33,7 @@
     "@database/local": "github:neoxr/database#local",
     "@neoxr/api": "^1.5.3",
     "@neoxr/helper": "^1.2.2",
+    "@session/mongo": "github:neoxr/session#mongo",
     "awesome-phonenumber": "~2.59.0",
     "axios": "~0.24.0",
     "beautify-console-log": "^1.3.12",
