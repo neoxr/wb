@@ -40,3 +40,28 @@ export interface DetectionOptions {
         };
     };
 }
+export interface Contact {
+    id: string;
+    lid?: string;
+    name?: string;
+    notify?: string;
+    verifiedName?: string;
+    imgUrl?: string | null | 'changed';
+    status?: string;
+}
+export type WAConnectionState = 'open' | 'connecting' | 'close';
+export type ConnectionState = {
+    connection: WAConnectionState;
+    lastDisconnect?: {
+        error: Error | undefined;
+        date: Date;
+    };
+    isNewLogin?: boolean;
+    qr?: string;
+    receivedPendingNotifications?: boolean;
+    legacy?: {
+        phoneConnected: boolean;
+        user?: Contact;
+    };
+    isOnline?: boolean;
+};

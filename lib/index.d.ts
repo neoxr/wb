@@ -2,8 +2,6 @@ import 'dotenv/config';
 export { default as Baileys } from './Socket/connection';
 export { default as Client } from './Socket/_connection';
 export { default as Connector } from './Socket/connector';
-export { default as Store } from './Socket/store';
-export { default as _Store } from './Socket/_store';
 export { default as Function } from './Utils/functions';
 export { default as Scraper } from './Utils/scraper';
 export { default as Cooldown } from './Utils/cooldown';
@@ -18,8 +16,6 @@ declare class Component {
     private Baileys;
     private Client;
     private Connector;
-    private Store;
-    private _Store;
     private Function;
     private Scraper;
     private Cooldown;
