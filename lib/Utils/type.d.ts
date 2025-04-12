@@ -65,3 +65,8 @@ export type ConnectionState = {
     };
     isOnline?: boolean;
 };
+export type WAPresence = 'unavailable' | 'available' | 'composing' | 'recording' | 'paused';
+export interface PresenceData {
+    lastKnownPresence: WAPresence;
+    lastSeen?: number;
+}
