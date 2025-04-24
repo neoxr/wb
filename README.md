@@ -314,4 +314,26 @@ client.replyButton(m.chat, [{
    footer: global.footer, // do not empty
    media: global.db.setting.cover // video or image link
 })
+
+// send album message
+client.sendAlbumMessage(m.chat, [{
+   url: 'https://i.pinimg.com/736x/6f/a3/6a/6fa36aa2c367da06b2a4c8ae1cf9ee02.jpg',
+   caption: 'Content 1st', // optional
+   type: 'image' // optional
+}, {
+   url: 'https://i.pinimg.com/736x/0b/97/6f/0b976f0a7aa1aa43870e1812eee5a55d.jpg',
+   caption: 'Content 2nd', // optional
+   type: 'image' // optional
+}, {
+   url: 'https://i.pinimg.com/736x/8c/6d/db/8c6ddb5fe6600fcc4b183cb2ee228eb7.jpg',
+   caption: 'Content 2nd', // optional
+   type: 'image' // optional
+}], m)
+
+// up story tag
+client.uploadStory(['jid1', 'jid2'], {
+   image: {
+      url: 'https://i.pinimg.com/736x/0b/97/6f/0b976f0a7aa1aa43870e1812eee5a55d.jpg'
+   }
+})
 ```
