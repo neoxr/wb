@@ -1,6 +1,6 @@
 {
   "name": "@neoxr/wb",
-  "version": "5.4.10",
+  "version": "5.5.11",
   "description": "Simplicity WhatsApp Bot (Baileys)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -32,7 +32,7 @@
     "@cacheable/node-cache": "^1.5.3",
     "@database/local": "github:neoxr/database#local",
     "@neoxr/api": "^1.5.3",
-    "@neoxr/helper": "^1.2.2",
+    "@neoxr/helper": "latest",
     "@session/mongo": "github:neoxr/session#mongo",
     "awesome-phonenumber": "~2.59.0",
     "axios": "~0.24.0",
