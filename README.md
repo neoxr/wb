@@ -6,7 +6,7 @@
 
 For example of use you can open the [example](https://github.com/neoxr/wb/tree/master/example) folder or here for [example base](https://github.com/neoxr/neoxr-bot)
 
-<p align="center"><img align="center" width="100%" src="https://qu.ax/kPeOk.jpg" /></p>
+<p align="center"><img align="center" width="100%" src="https://raw.githubusercontent.com/neoxr/neoxr/refs/heads/main/wb.png" /></p>
 
 ### Handling Events
 
