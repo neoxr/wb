@@ -1,10 +1,10 @@
-## Simplicity WhatsApp Bot (Baileys)
+## SIMPLICITY WHATSAPP BOT
 
-> This is a WhatsApp bot module based on Baileys which can be used in a very easy way.
+> A lightweight and developer-friendly WhatsApp bot library built on top of [Baileys](https://github.com/WhiskeySockets/Baileys). It simplifies the process of creating, customizing, and managing WhatsApp bot. Designed for effortless integration and quick setup.
 
 ### Example
 
-For example of use you can open the [example](https://github.com/neoxr/wb/tree/master/example) folder or here for [example base](https://github.com/neoxr/neoxr-bot)
+To see an example in action, visit the [neoxr-bot](https://github.com/neoxr/neoxr-bot) repository.
 
 <p align="center"><img align="center" width="100%" src="https://raw.githubusercontent.com/neoxr/neoxr/refs/heads/main/wb.png" /></p>
 
