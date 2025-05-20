@@ -7,9 +7,6 @@
   "files": [
     "lib/*"
   ],
-  "scripts": {
-    "dev": "node ./example/index.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/neoxr/wb.git"
