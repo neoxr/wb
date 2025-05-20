@@ -1,4 +1,4 @@
-name: Publish to NPM
+name: Publish with Yarn + Provenance
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 permissions:
   contents: read
-  id-token: write  # ⬅️ WAJIB untuk provenance
+  id-token: write
 
 jobs:
   publish:
@@ -26,10 +26,6 @@ jobs:
 
       - name: Install dependencies with Yarn
         run: yarn install --frozen-lockfile
-
-      # Hapus atau komentari bagian build jika tidak dibutuhkan
-      # - name: Build project
-      #   run: yarn build
 
       - name: Publish to npm with provenance
         run: npm publish --access public --provenance
