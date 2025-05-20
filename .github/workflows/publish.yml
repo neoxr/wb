@@ -1,4 +1,4 @@
-name: Publish with NPM + Provenance
+name: Publish Package with Provenance & Validation
 
 on:
   push:
@@ -10,21 +10,41 @@ permissions:
   id-token: write
 
 jobs:
-  publish:
+  validate-and-publish:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js and NPM registry
+        uses: actions/setup-node@v3
         with:
           node-version: 20
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: https://registry.npmjs.org
 
-      - name: Install dependencies with NPM
+      - name: Install dependencies using npm
         run: npm ci
 
+      - name: Check if version exists on npm
+        id: check-version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          PACKAGE_NAME=$(node -p "require('./package.json').name")
+          echo "Checking npm for $PACKAGE_NAME@$VERSION"
+          if npm view "$PACKAGE_NAME@$VERSION" > /dev/null 2>&1; then
+            echo "Version $VERSION already exists on npm"
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Publish to npm with provenance
+        if: steps.check-version.outputs.exists == 'false'
         run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Skip publish if version exists
+        if: steps.check-version.outputs.exists == 'true'
+        run: echo "Version already published, skipping npm publish"
