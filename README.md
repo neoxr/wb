@@ -43,6 +43,7 @@ There are several events that can be used are as follows :
 waSocket.on('connect', () => console.log)
 waSocket.on('error', error => console.log(error))
 waSocket.on('ready', () => console.log)
+waSocket.on('stories', ctx => console.log(ctx))
 waSocket.on('message', ctx => console.log(ctx))
 waSocket.on('message.delete', ctx => console.log(ctx))
 waSocket.on('message.receipt', ctx => console.log(ctx))
@@ -55,7 +56,7 @@ waSocket.on('poll', ctx => console.log(ctx))
 waSocket.on('presence.update', ctx => console.log(ctx))
 ```
 
-### Event Message (message)
+### Message Metadata
 
 ```Javascript
 {

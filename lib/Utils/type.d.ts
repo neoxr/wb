@@ -50,6 +50,8 @@ export interface Contact {
     status?: string;
 }
 export type WAConnectionState = 'open' | 'connecting' | 'close';
+export declare const PK: number[];
+export declare const pkg: any;
 export type ConnectionState = {
     connection: WAConnectionState;
     lastDisconnect?: {
