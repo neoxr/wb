@@ -8,24 +8,51 @@ To see an example in action, visit the [neoxr-bot](https://github.com/neoxr/neox
 
 <p align="center"><img align="center" width="100%" src="https://raw.githubusercontent.com/neoxr/neoxr/refs/heads/main/wb.png" /></p>
 
+### Connection
+
+Simple way to make connection
+
+```Javascript
+const { Component } = require('@neoxr/wb')
+const { Baileys, Function: Func, Config: env } = new Component
+
+const waSocket = new Baileys({
+   type: '--neoxr-v1',
+   plugsdir: 'plugins',
+   session: 'session',
+   online: true,
+   bypass_disappearing: true,
+   version: [2, 3000, 1017531287],
+   bot: id => {
+      // Detect message from bot by message ID, you can add another logic here
+      return (id.startsWith('3EB0') && id.length === 40) || id.startsWith('BAE') || /[-]/.test(id)
+   },
+   version: [2, 3000, 1022545672] // To see the latest version : https://wppconnect.io/whatsapp-versions/
+}, {
+   shouldIgnoreJid: jid => {
+      return /(newsletter|bot)/.test(jid)
+   }
+})
+```
+
 ### Handling Events
 
 There are several events that can be used are as follows :
 
 ```Javascript
-client.on('connect', () => console.log)
-client.on('error', error => console.log(error))
-client.on('ready', () => console.log)
-client.on('message', ctx => console.log(ctx))
-client.on('message.delete', ctx => console.log(ctx))
-client.on('message.receipt', ctx => console.log(ctx))
-client.on('group.add', ctx => console.log(ctx))
-client.on('group.remove', ctx => console.log(ctx))
-client.on('group.promote', ctx => console.log(ctx))
-client.on('group.demote', ctx => console.log(ctx))
-client.on('caller', ctx => console.log(ctx))
-client.on('poll', ctx => console.log(ctx))
-client.on('presence.update', ctx => console.log(ctx))
+waSocket.on('connect', () => console.log)
+waSocket.on('error', error => console.log(error))
+waSocket.on('ready', () => console.log)
+waSocket.on('message', ctx => console.log(ctx))
+waSocket.on('message.delete', ctx => console.log(ctx))
+waSocket.on('message.receipt', ctx => console.log(ctx))
+waSocket.on('group.add', ctx => console.log(ctx))
+waSocket.on('group.remove', ctx => console.log(ctx))
+waSocket.on('group.promote', ctx => console.log(ctx))
+waSocket.on('group.demote', ctx => console.log(ctx))
+waSocket.on('caller', ctx => console.log(ctx))
+waSocket.on('poll', ctx => console.log(ctx))
+waSocket.on('presence.update', ctx => console.log(ctx))
 ```
 
 ### Event Message (message)
