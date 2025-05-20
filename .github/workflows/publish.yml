@@ -1,4 +1,4 @@
-name: Publish with Yarn + Provenance
+name: Publish with NPM + Provenance
 
 on:
   push:
@@ -14,18 +14,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v3
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Install Yarn
-        run: corepack enable
-
-      - name: Install dependencies with Yarn
-        run: yarn install --frozen-lockfile
+      - name: Install dependencies with NPM
+        run: npm ci
 
       - name: Publish to npm with provenance
         run: npm publish --access public --provenance
