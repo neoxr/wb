@@ -30,9 +30,9 @@ declare class Function {
     uuid: () => string;
     random: (list: any[]) => any;
     randomInt: (min: number, max: number) => number;
-    formatter: (integer: number) => string;
-    formatNumber: (integer: number) => string;
-    h2k: (integer: number) => string;
+    formatter: (integer: number | bigint) => string;
+    formatNumber: (integer: number | bigint) => string;
+    h2k: (num: number | bigint) => string;
     formatSize: (size: number) => string;
     getSize: (str: string | number) => Promise<string>;
     getFile: (source: string | Buffer, filename?: string, options?: any) => Promise<any>;

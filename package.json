@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/neoxr/neoxr-bot"
+    "url": "https://github.com/neoxr/neoxr-bot/tree/library"
   },
   "keywords": [
     "baileys",
