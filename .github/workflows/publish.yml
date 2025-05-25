@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies using npm
         run: npm ci
 
+      - name: Setup .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN_WB }}" > ~/.npmrc
+
       - name: Check if version exists on npm
         id: check-version
         run: |
@@ -41,9 +44,11 @@ jobs:
 
       - name: Publish to npm with provenance
         if: steps.check-version.outputs.exists == 'false'
-        run: npm publish --access public --provenance
+        run: |
+          npm publish --access public --provenance
+          npm deprecate @neoxr/wb@"< ${{ github.ref_name }}" "This version is no longer supported due to bugs. Please upgrade to the latest version for a better experience."
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_WB }}
 
       - name: Skip publish if version exists
         if: steps.check-version.outputs.exists == 'true'
