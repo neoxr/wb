@@ -26,9 +26,6 @@ jobs:
       - name: Install dependencies using npm
         run: npm ci
 
-      - name: Setup .npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-
       - name: Check if version exists on npm
         id: check-version
         run: |
