@@ -44,9 +44,7 @@ jobs:
 
       - name: Publish to npm with provenance
         if: steps.check-version.outputs.exists == 'false'
-        run: |
-          npm publish --access public --provenance
-          npm deprecate @neoxr/wb@"< ${{ github.ref_name }}" "This version is no longer supported due to bugs. Please upgrade to the latest version for a better experience."
+        run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
