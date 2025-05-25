@@ -26,6 +26,11 @@ jobs:
       - name: Install dependencies using npm
         run: npm ci
 
+      - name: Setup .npmrc with registry and token
+        run: |
+          echo "registry=https://registry.npmjs.org" > ~/.npmrc
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+
       - name: Check if version exists on npm
         id: check-version
         run: |
@@ -38,6 +43,7 @@ jobs:
           else
             echo "exists=false" >> $GITHUB_OUTPUT
           fi
+
       - name: Publish to npm with provenance
         if: steps.check-version.outputs.exists == 'false'
         run: npm publish --access public --provenance
