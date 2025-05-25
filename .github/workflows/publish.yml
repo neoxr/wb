@@ -38,13 +38,11 @@ jobs:
           else
             echo "exists=false" >> $GITHUB_OUTPUT
           fi
-
       - name: Publish to npm with provenance
         if: steps.check-version.outputs.exists == 'false'
         run: npm publish --access public --provenance
-
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_WB }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Skip publish if version exists
         if: steps.check-version.outputs.exists == 'true'
