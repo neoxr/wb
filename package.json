@@ -1,6 +1,6 @@
 {
   "name": "@neoxr/wb",
-  "version": "5.7.18",
+  "version": "5.7.19",
   "description": "A simple and easy-to-use WhatsApp bot module built on top of Baileys. Designed for effortless integration and quick setup.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -29,6 +29,8 @@
   "dependencies": {
     "@cacheable/node-cache": "^1.5.3",
     "@database/local": "github:neoxr/database#local",
+    "@neoxr/api": "^1.5.3",
+    "@neoxr/helper": "^2.2.2",
     "@session/mongo": "github:neoxr/session#mongo",
     "awesome-phonenumber": "~2.59.0",
     "axios": "~0.30.0",
@@ -54,10 +56,6 @@
     "qrcode-terminal": "^0.12.0",
     "rootpath": "^0.1.2",
     "syntax-error": "~1.4.0"
-  },
-  "peerDependencies": {
-    "@neoxr/api": "^1.5.3",
-    "@neoxr/helper": "^2.2.2"
   },
   "directories": {
     "lib": "lib"
