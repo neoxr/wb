@@ -7,7 +7,8 @@ on:
 
 permissions:
   contents: read
-  id-token: write
+  packages: write
+  id-token: write  # diperlukan untuk provenance
 
 jobs:
   publish:
@@ -19,18 +20,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: 'https://registry.npmjs.org'
           scope: '@neoxr'
 
-      - name: Enable Yarn
+      - name: Enable Corepack
         run: corepack enable
 
-      - name: Install dependencies with Yarn
+      - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Publish package to npm
+      - name: Publish to npmjs.org with provenance
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+          npm publish --registry=https://registry.npmjs.org/ --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish to GitHub Packages
         run: |
-          echo "Publishing with provenance (CI environment)"
-          npm publish --access public --provenance
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > .npmrc
+          npm publish --registry=https://npm.pkg.github.com/
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

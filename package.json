@@ -1,6 +1,6 @@
 {
   "name": "@neoxr/wb",
-  "version": "5.7.19",
+  "version": "5.7.20",
   "description": "A simple and easy-to-use WhatsApp bot module built on top of Baileys. Designed for effortless integration and quick setup.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
