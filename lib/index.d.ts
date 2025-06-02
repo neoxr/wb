@@ -11,6 +11,7 @@ export { default as Converter } from './Utils/converter';
 export { default as Chiper } from './Utils/chiper';
 export { default as Caching } from './Utils/caching';
 export { default as Spam } from './Utils/spam';
+export { default as Instance } from './Server/instance';
 declare class Component {
     private Config;
     private Baileys;
@@ -25,6 +26,7 @@ declare class Component {
     private Chiper;
     private Caching;
     private Spam;
+    private Instance;
     private NeoxrApi;
     private Version;
     constructor();
