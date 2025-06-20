@@ -12,6 +12,10 @@ export { default as Chiper } from './Utils/chiper';
 export { default as Caching } from './Utils/caching';
 export { default as Spam } from './Utils/spam';
 export { default as Instance } from './Server/instance';
+declare const Config: any;
+declare const NeoxrApi: any;
+declare const Version: any;
+export { Config, NeoxrApi, Version };
 declare class Component {
     private Config;
     private Baileys;

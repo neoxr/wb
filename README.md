@@ -127,7 +127,7 @@ client.sendMessageModify(m.chat, `Test!`, m, {
    ads: false,
    /* can buffer or url */
    thumbnail: 'https://iili.io/HP3ODj2.jpg',
-   link: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
+   url: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
 })
 
 // send a text message with custom thumbnail & fake quoted
@@ -137,7 +137,7 @@ client.sendMessageModifyV2(m.chat, `Test!`, '© neoxr-bot', {
    ads: false,
    /* can buffer or url */
    thumbnail: 'https://iili.io/HP3ODj2.jpg',
-   link: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
+   url: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
 })
 
 // send a text message with fake quoted
