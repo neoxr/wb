@@ -1,6 +1,6 @@
 {
   "name": "@neoxr/wb",
-  "version": "5.9.6",
+  "version": "5.9.7",
   "description": "A simple and easy-to-use WhatsApp bot module built on top of Baileys. Designed for effortless integration and quick setup.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -61,6 +61,10 @@
     "rootpath": "^0.1.2",
     "socket.io": "^4.8.1",
     "syntax-error": "~1.4.0"
+  },
+  "peerDependencies": {
+    "express": "~4.16.4",
+    "socket.io": "^4.8.1"
   },
   "directories": {
     "lib": "lib"

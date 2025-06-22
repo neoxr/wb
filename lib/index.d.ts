@@ -11,11 +11,13 @@ export { default as Converter } from './Utils/converter';
 export { default as Chiper } from './Utils/chiper';
 export { default as Caching } from './Utils/caching';
 export { default as Spam } from './Utils/spam';
+export { default as Create } from './Server/create';
 export { default as Instance } from './Server/instance';
+export { default as Loader } from './Server/loader';
+import { collection, allowedIPs, reqUtils } from './Server/validator';
 declare const Config: any;
 declare const NeoxrApi: any;
 declare const Version: any;
-export { Config, NeoxrApi, Version };
 declare class Component {
     private Config;
     private Baileys;
@@ -30,9 +32,14 @@ declare class Component {
     private Chiper;
     private Caching;
     private Spam;
+    private Create;
     private Instance;
+    private Loader;
+    private Collection;
+    private AllowedIPs;
+    private ReqUtils;
     private NeoxrApi;
     private Version;
     constructor();
 }
-export { Component };
+export { Component, Config, collection as Collection, allowedIPs as AllowedIPs, reqUtils as ReqUtils, NeoxrApi, Version };
