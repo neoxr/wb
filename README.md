@@ -235,6 +235,7 @@ var buttons = [{
 client.sendIAMessage(m.chat, buttons, m, {
    header: '',
    content: 'Hi!',
+   // v2: true (for product style with image)
    footer: '',
    media: global.db.setting.cover // video or image link
 })
