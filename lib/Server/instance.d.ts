@@ -1,0 +1,11 @@
+declare class Instance {
+    private bot;
+    constructor();
+    private init;
+    getBot: (jid: string, key: string) => any | undefined;
+    getBotByHash: (hash: string) => any | undefined;
+    setBot: (jid: string, socket: any) => void;
+    delBot: (jid: string) => boolean;
+}
+declare const _default: Instance;
+export default _default;
