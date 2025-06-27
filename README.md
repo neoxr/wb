@@ -8,6 +8,89 @@ To see an example in action, visit the [neoxr-bot](https://github.com/neoxr/neox
 
 <p align="center"><img align="center" width="100%" src="https://raw.githubusercontent.com/neoxr/neoxr/refs/heads/main/wb.png" /></p>
 
+### Options
+
+The following is the default configuration used when initializing a new Baileys connection. This setup is tailored for projects using this lib, and includes options for session management, plugin loading, and handling bot-specific behavior.
+
+```Javascript
+new Baileys({
+   /**
+    * Plugins model
+    * Choose one --neoxr-v1 or --neoxr-v2.
+    */
+   type: '--neoxr-v1',
+
+   /**
+    * Path to the plugins directory.
+    * Required if your system dynamically loads plugins.
+    */
+   plugsdir: 'plugins',
+
+   /**
+    * Path to the session directory.
+    * Stores session data such as creds.json and keys.
+    */
+   session: 'session',
+
+   /**
+    * If true, keeps the bot status always online.
+    */
+   online: true,
+
+   /**
+    * If true, disables WhatsApp's disappearing messages behavior for your client.
+    * Useful if you want messages to remain even if disappearing mode is active.
+    */
+   bypass_disappearing: true,
+
+   /**
+    * A function to determine if a message was sent by the bot.
+    * This is important for filtering bot messages vs. user messages.
+    * Examples: IDs starting with "3EB0" or "BAE", or containing a dash (-).
+    */
+   bot: (id) => {
+      return (id.startsWith('3EB0') && id.length === 40) || id.startsWith('BAE') || /[-]/.test(id)
+   },
+
+   /**
+    * WhatsApp protocol version used by the client.
+    * Should match the currently supported version by WhatsApp.
+    * Format: [major, minor, build]
+    */
+   version: [2, 3000, 1022545672], // Can also use: env.pairing.version
+
+   /**
+    * If true, the client runs in server mode (non-interactive).
+    * Can be enabled via the "--server" command-line argument.
+    */
+   server: process.argv.includes('--server'),
+
+   /**
+    * Override protocol version (optional).
+    * Useful if dynamically configured via environment.
+    */
+   version: env.pairing.version
+
+}, {
+   /**
+    * Information about the emulated browser for WhatsApp Web.
+    * Format: [OS, Browser Name, Browser Version]
+    * Displayed under "Linked Devices" in the WhatsApp mobile app.
+    */
+   browser: ['Ubuntu', 'Firefox', '20.0.00'],
+
+   /**
+    * Function to ignore specific JIDs (WhatsApp IDs).
+    * Return true to ignore the JID, false to accept it.
+    * Example: ignore newsletter and bot messages.
+    */
+   shouldIgnoreJid: (jid) => {
+      return /(newsletter|bot)/.test(jid)
+   }
+})
+
+```
+
 ### Connection
 
 Simple way to make connection
