@@ -1,4 +1,4 @@
-import { Options } from './types';
+import { Options, KeyType, DataObject, ConversionTuple } from './types';
 declare class Function {
     delay: (time: number) => Promise<unknown>;
     createThumb: (input: string | Buffer, width?: number) => Promise<Buffer>;
@@ -78,6 +78,7 @@ declare class Function {
     getEmoji: (str: string) => string[] | null;
     isEmojiPrefix: (str: string) => boolean;
     getDevice: (id: string) => string;
+    indexify: (conversions: ConversionTuple[]) => Map<KeyType, DataObject>[];
     isPortInUse: (host?: any) => Promise<unknown>;
     maskNumber: (phoneNumber: number | string, maskChar?: string) => string;
     maskIp: (str: string, maskChar?: string) => string;

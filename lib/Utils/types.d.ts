@@ -118,3 +118,16 @@ export interface Collection {
     error: boolean | undefined;
     premium?: boolean;
 }
+export type KeyType = string | number;
+export type DataObject = Record<string, any>;
+export type ConversionTuple = [DataObject[], string];
+export interface MinimalBaileysMessage {
+    key: {
+        remoteJid?: string;
+        participant?: string;
+    };
+    message?: {
+        [key: string]: any;
+    };
+    mtype?: string;
+}
