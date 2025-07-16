@@ -36,7 +36,7 @@ export interface DetectionOptions {
     };
     banned_times: number;
     cooldown: {
-        hold: (chat: string) => {
+        hold: (clientId: string, chat: string) => {
             state: boolean;
         };
     };
