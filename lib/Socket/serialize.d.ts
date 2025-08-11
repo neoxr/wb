@@ -1,0 +1,8 @@
+import Message from './message';
+declare class Serialize extends Message {
+    mention: (text: string) => string[];
+    getMedia: (message: any) => Promise<Buffer<ArrayBuffer>>;
+    bind(parent: any, m: any, Caching?: any | null, bypassDisappearing?: boolean, bot?: (id: string) => boolean): any;
+}
+declare const _default: Serialize;
+export default _default;
