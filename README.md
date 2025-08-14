@@ -38,6 +38,11 @@ new Baileys({
    online: true,
 
    /**
+    * If true, you can see bot typing or recording.
+    */
+   presence: true
+
+   /**
     * If true, disables WhatsApp's disappearing messages behavior for your client.
     * Useful if you want messages to remain even if disappearing mode is active.
     */
