@@ -33,12 +33,12 @@ export interface ConnectionOpts {
       type: SessionType,
       session: string,
       config?: any,
-      number?: string | number
+      number?: string | number,
       owner?: string | number
    },
-   setting?: any
-   engines: string[]
-   debug: boolean
+   setting?: any,
+   engines: any[],
+   debug: boolean,
 }
 ```
 
