@@ -2,7 +2,7 @@
 
 > A lightweight and developer-friendly WhatsApp bot library built on top of [Baileys](https://github.com/WhiskeySockets/Baileys). It simplifies the process of creating, customizing, and managing WhatsApp bot. Designed for effortless integration and quick setup.
 
-> ⚠️  **Starting from version 6 onward, this module was refactored, and some functions may be missing or modified**.
+> ⚠️  **Starting from version 6 onward, this module was refactored, and some functions may be missing or modified and only supports ESM plugins (ECMAScript Modules)**.
 
 ### Example
 
