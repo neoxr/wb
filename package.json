@@ -3,7 +3,6 @@
   "version": "6.0.0",
   "description": "Simplicity WhatsApp Bot (Baileys)",
   "main": "lib/index.js",
-  "type": "module",
   "files": [
     "lib/*"
   ],
