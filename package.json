@@ -43,7 +43,7 @@
     "jimp": "~0.22.12",
     "lodash": "^4.17.21",
     "mime-types": "~2.1.32",
-    "mongodb": "~4.9.0",
+    "mongodb": "~4.17.0",
     "morgan": "^1.10.0",
     "node-cron": "~3.0.0",
     "node-id3": "^0.2.7",
@@ -57,7 +57,7 @@
   "peerDependencies": {
     "better-sqlite3": "~12.1.1",
     "express": "~4.16.4",
-    "mongodb": "~4.9.0",
+    "mongodb": "~4.17.0",
     "mysql2": "~3.12.0",
     "pg": "~8.13.1",
     "request-ip": "^3.3.0"
