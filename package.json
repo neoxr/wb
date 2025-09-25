@@ -1,6 +1,6 @@
 {
   "name": "@neoxr/wb",
-  "version": "6.0.0-rc.2",
+  "version": "6.0.0-rc.3",
   "description": "Simplicity WhatsApp Bot (Baileys)",
   "main": "lib/index.js",
   "files": [
@@ -26,7 +26,7 @@
   "homepage": "https://github.com/neoxr/wb#readme",
   "dependencies": {
     "@neoxr/api": "^1.5.3",
-    "@neoxr/helper": "^2.3.2",
+    "@neoxr/helper": "^2.3.5",
     "awesome-phonenumber": "~2.59.0",
     "bytes": "^3.1.2",
     "chalk": "4.1.0",

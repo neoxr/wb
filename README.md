@@ -23,6 +23,7 @@ export interface ConnectionOpts {
    bypass_disappearing?: boolean,
    server?: boolean,
    bot?: any,
+   custom_id: string,
    pairing?: {
       state: boolean,
       number: string,
@@ -65,6 +66,7 @@ const waSocket = new Client({
       session: 'session',
       config: process.env?.DATABASE_URL || ''
    },
+   custom_id: 'neoxr',
    bot: (id) => {
       return (id.startsWith('3EB0') && id.length === 40) || id.startsWith('BAE') || /[-]/.test(id)
    },
