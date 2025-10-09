@@ -35,7 +35,7 @@
     "crypto-digest-sync": "^1.0.0",
     "date-fns": "^4.1.0",
     "dotenv": "^16.0.1",
-    "express": "~4.16.4",
+    "express": "~4.21.2",
     "file-type": "~16.5.2",
     "flatted": "^3.3.3",
     "fluent-ffmpeg": "~2.1.3",
