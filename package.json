@@ -1,6 +1,6 @@
 {
   "name": "@neoxr/wb",
-  "version": "6.0.0-rc.16",
+  "version": "6.0.0-rc.17",
   "description": "Simplicity WhatsApp Bot (Baileys)",
   "main": "lib/index.js",
   "files": [
@@ -60,6 +60,7 @@
     "mongodb": "4.9.0",
     "mysql2": "3.12.0",
     "pg": "8.13.1",
+    "redis": "5.8.3",
     "request-ip": "^3.3.0"
   },
   "peerDependenciesMeta": {
@@ -73,6 +74,9 @@
       "optional": true
     },
     "pg": {
+      "optional": true
+    },
+    "redis": {
       "optional": true
     },
     "request-ip": {
