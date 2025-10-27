@@ -407,10 +407,21 @@ client.sendAlbumMessage(m.chat, [{
    type: 'image' // optional
 }], m)
 
-// up story tag
-client.uploadStory(['jid1', 'jid2'], {
-   image: {
-      url: 'https://i.pinimg.com/736x/0b/97/6f/0b976f0a7aa1aa43870e1812eee5a55d.jpg'
-   }
+// send group status (video & image)
+client.groupStatus(m.chat, {
+   media: 'https://i.pinimg.com/736x/0b/97/6f/0b976f0a7aa1aa43870e1812eee5a55d.jpg', // Support URL and Buffer
+   caption: 'Hi!'
+})
+
+// send group status (audio)
+client.groupStatus(m.chat, {
+   media: 'https://example.com/audio.mp3', // Support URL and Buffer
+   background: '#FF0000'
+})
+
+// send group status (text)
+client.groupStatus(m.chat, {
+   text: 'Hi!',
+   background: '#FF0000'
 })
 ```
