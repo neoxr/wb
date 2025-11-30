@@ -26,7 +26,7 @@
   "homepage": "https://github.com/neoxr/wb#readme",
   "dependencies": {
     "@neoxr/api": "^1.5.3",
-    "@neoxr/helper": "^2.3.7",
+    "@neoxr/helper": "^2.3.8",
     "awesome-phonenumber": "~2.59.0",
     "bytes": "^3.1.2",
     "chalk": "4.1.0",
