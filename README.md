@@ -288,6 +288,21 @@ client.sendIAMessage(m.chat, buttons, m, {
    media: global.db.setting.cover // video or image link
 })
 
+// button & list (multiple)
+client.sendIAMessage(m.chat, buttons, m, {
+   header: '',
+   content: 'Hi!',
+   // v2: true, (for product style with image)
+   footer: '',
+   media: global.db.setting.cover, // video or image link
+   multiple: {
+      name: 'オートメーション',
+      code: 'neoxr-bot',
+      list_title: 'Select Menu',
+      button_title: 'Tap Here!'
+   }
+})
+
 // carousel message
 const cards = [{
    header: {
