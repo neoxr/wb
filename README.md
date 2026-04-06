@@ -15,7 +15,7 @@ To see an example in action, visit the [neoxr-bot](https://github.com/neoxr/neox
 The following is the default configuration used when initializing a new Baileys connection. This setup is tailored for projects using this lib, and includes options for session management, plugin loading, and handling bot-specific behavior.
 
 ```Javascript
-type SessionType = 'mongo' | 'postgres' | 'local' | 'mysql' | 'sqlite'
+type SessionType = 'mongo' | 'postgres' | 'local' | 'mysql' | 'sqlite' | 'redis'
 
 export interface ConnectionOpts {
    online?: boolean,
