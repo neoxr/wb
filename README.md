@@ -439,4 +439,26 @@ client.groupStatus(m.chat, {
    text: 'Hi!',
    background: '#FF0000'
 })
+
+// send code
+client.sendMetaMessage(m.chat, {
+   text: 'This is an example of sending a message with a code format.',
+   code: {
+      language: 'javascript',
+      code: fs.readFileSync('./error.js', 'utf-8')
+   }
+})
+
+// send table
+client.sendMetaMessage(m.chat, {
+   text: 'This is an example of sending a table.',
+   table: {  
+      title: 'Data',  
+      headers: ['Code', 'Artist'],  
+      rows: [  
+         ['SSIN-273', 'Yua Mikami'],  
+         ['RTXU-849', 'Megawait']  
+      ]  
+   }
+})
 ```
