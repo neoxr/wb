@@ -441,7 +441,7 @@ client.groupStatus(m.chat, {
 })
 
 // send code
-client.sendMetaMessage(m.chat, {
+client.sendMetaMsg(m.chat, {
    text: 'This is an example of sending a message with a code format.',
    code: {
       language: 'javascript',
@@ -450,7 +450,7 @@ client.sendMetaMessage(m.chat, {
 })
 
 // send table
-client.sendMetaMessage(m.chat, {
+client.sendMetaMsg(m.chat, {
    text: 'This is an example of sending a table.',
    table: {  
       title: 'Data',  
