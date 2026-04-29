@@ -178,11 +178,35 @@ client.sendMessageModify(m.chat, `Test!`, m, {
    url: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
 })
 
+// send a text message with custom thumbnail (preview link)
+client.sendMessageModify(m.chat, `Test!`, m, {
+   title: '© neoxr-bot',
+   largeThumb: true,
+   type: 'preview-link',
+   /* choose: landscape (default), potrait, square */
+   ratio: 'landscape',
+   /* can buffer or url */
+   thumbnail: 'https://iili.io/HP3ODj2.jpg',
+   url: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
+})
+
 // send a text message with custom thumbnail & fake quoted
 client.sendMessageModifyV2(m.chat, `Test!`, '© neoxr-bot', {
    title: '© neoxr-bot',
    largeThumb: true,
    ads: false,
+   /* can buffer or url */
+   thumbnail: 'https://iili.io/HP3ODj2.jpg',
+   url: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
+})
+
+// send a text message with custom thumbnail & fake quoted (preview link)
+client.sendMessageModify(m.chat, `Test!`, m, {
+   title: '© neoxr-bot',
+   largeThumb: true,
+   type: 'preview-link',
+   /* choose: landscape (default), potrait, square */
+   ratio: 'landscape',
    /* can buffer or url */
    thumbnail: 'https://iili.io/HP3ODj2.jpg',
    url: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
