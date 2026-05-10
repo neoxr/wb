@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/neoxr/wb#readme",
   "dependencies": {
+    "@cacheable/node-cache": "~3.0.1",
     "@neoxr/api": "^1.5.3",
     "@neoxr/helper": "latest",
     "awesome-phonenumber": "~2.59.0",
