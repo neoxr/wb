@@ -187,7 +187,8 @@ client.sendMessageModify(m.chat, `Test!`, m, {
    ratio: 'landscape',
    /* can buffer or url */
    thumbnail: 'https://iili.io/HP3ODj2.jpg',
-   url: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
+   url: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V',
+   icon: 'https://i.pinimg.com/1200x/5c/d9/d1/5cd9d1f17eba515351444b83b9991ee4.jpg'
 })
 
 // send a text message with custom thumbnail & fake quoted
@@ -197,11 +198,11 @@ client.sendMessageModifyV2(m.chat, `Test!`, '© neoxr-bot', {
    ads: false,
    /* can buffer or url */
    thumbnail: 'https://iili.io/HP3ODj2.jpg',
-   url: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
+   url: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V',
 })
 
 // send a text message with custom thumbnail & fake quoted (preview link)
-client.sendMessageModify(m.chat, `Test!`, m, {
+client.sendMessageModifyV2(m.chat, `Test!`, m, {
    title: '© neoxr-bot',
    largeThumb: true,
    type: 'preview-link',
@@ -209,7 +210,8 @@ client.sendMessageModify(m.chat, `Test!`, m, {
    ratio: 'landscape',
    /* can buffer or url */
    thumbnail: 'https://iili.io/HP3ODj2.jpg',
-   url: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V'
+   url: 'https://chat.whatsapp.com/HYknAquOTrECm9KPJJQO1V',
+   icon: 'https://i.pinimg.com/1200x/5c/d9/d1/5cd9d1f17eba515351444b83b9991ee4.jpg'
 })
 
 // send a text message with fake quoted
