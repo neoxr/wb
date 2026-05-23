@@ -26,6 +26,7 @@
   "homepage": "https://github.com/neoxr/wb#readme",
   "dependencies": {
     "@cacheable/node-cache": "~3.0.1",
+    "@napi-rs/image": "^1.12.0",
     "@neoxr/api": "^1.5.3",
     "@neoxr/helper": "latest",
     "awesome-phonenumber": "~2.59.0",
@@ -52,6 +53,7 @@
     "pino": "^9.6",
     "qrcode-terminal": "^0.12.0",
     "rootpath": "^0.1.2",
+    "sharp": "0.34.5",
     "syntax-error": "~1.4.0"
   },
   "peerDependencies": {
@@ -59,7 +61,8 @@
     "mongodb": "4.9.0",
     "mysql2": "3.12.0",
     "pg": "8.13.1",
-    "redis": "5.8.3"
+    "redis": "5.8.3",
+    "sharp": "0.34.5"
   },
   "peerDependenciesMeta": {
     "better-sqlite3": {
