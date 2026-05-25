@@ -466,25 +466,29 @@ client.groupStatus(m.chat, {
    background: '#FF0000'
 })
 
-// send code
-client.sendMetaMsg(m.chat, {
-   text: 'This is an example of sending a message with a code format.',
-   code: {
-      language: 'javascript',
-      code: fs.readFileSync('./error.js', 'utf-8')
+// send meta message (rich message)
+client.sendMetaMsg(m.chat, [
+   {
+      text: `Hi @${m.sender.replace(/@.+/, '')}, this is an example of sending a message with a code format.`
+   },
+   {
+      code: {
+         language: 'javascript',
+         code: fs.readFileSync('./error.js', 'utf-8')
+     }
+   },
+   {
+      text: `@${m.sender.replace(/@.+/, '')} and this is an example of sending a table.`
+   },
+   {
+      table: {
+         title: 'Data',
+         headers: ['Code', 'Artist'],
+         rows: [
+            ['SSIN-273', 'Yua Mikami'],
+            ['RTXU-849', 'Megawait']
+         ]
+      }
    }
-})
-
-// send table
-client.sendMetaMsg(m.chat, {
-   text: 'This is an example of sending a table.',
-   table: {  
-      title: 'Data',  
-      headers: ['Code', 'Artist'],  
-      rows: [  
-         ['SSIN-273', 'Yua Mikami'],  
-         ['RTXU-849', 'Megawait']  
-      ]  
-   }
-})
+], null, { mentions: [m.sender]})
 ```
