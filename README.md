@@ -102,6 +102,7 @@ waSocket.on('group.request', ctx => console.log(ctx))
 waSocket.on('caller', ctx => console.log(ctx))
 waSocket.on('poll', ctx => console.log(ctx))
 waSocket.on('presence.update', ctx => console.log(ctx))
+waSocket.on('lid-mapping', ctx => console.log(ctx))
 ```
 
 ### Message Metadata
