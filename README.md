@@ -408,13 +408,24 @@ client.replyButton(m.chat, buttons, m, {
    }
 })
 
+// button location
+client.replyButton(m.chat, buttons, m, {
+   text: 'Hi @0', // do not empty
+   footer: global.footer, // do not empty
+   media: global.db.setting.cover, // file link (all extension)
+   location: {
+      name: global.header,
+      description: 'オートメーション'
+   }
+})
+
 // old button + native flow
 client.replyButton(m.chat, [{
    text: 'Runtime',
    command: '.runtime'
 }, {
    name: 'single_select',
-   param: {
+   params: {
       title: 'Tap!',
       sections: [{
          rows: [{
