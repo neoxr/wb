@@ -633,4 +633,16 @@ client.sendMetaMsg(m.chat, [
    }], m, {
    title: global.header
 })
+
+// send poll result
+client.pollResult(m.chat, {
+   name: 'Demo Poll Result',
+   votes: [{
+      name: 'Jokowi',
+      count: 1500
+   }, {
+      name: 'Prabowo',
+      count: 200
+   }]
+}, m)
 ```
