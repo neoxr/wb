@@ -242,6 +242,27 @@ client.sendSticker(m.chat, 'https://iili.io/HP3ODj2.jpg', m, {
    author: '© neoxr.js'
 })
 
+// send an AI sticker message from url or buffer
+client.sendSticker(m.chat, 'https://iili.io/HP3ODj2.jpg', m, {
+   packname: 'Sticker by',
+   author: '© neoxr.js',
+   meta: true
+})
+
+// send a lock sticker from url or buffer
+client.sendSticker(m.chat, 'https://iili.io/HP3ODj2.jpg', m, {
+   packname: 'Sticker by',
+   author: '© neoxr.js',
+   lock: true
+})
+
+// send a premium sticker message from url or buffer
+client.sendSticker(m.chat, 'https://iili.io/HP3ODj2.jpg', m, {
+   packname: 'Sticker by',
+   author: '© neoxr.js',
+   premium: true
+})
+
 // send polling message
 client.sendPoll(m.chat, 'Do you like this library ?', {
    options: ['Yes', 'No'],
