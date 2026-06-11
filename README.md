@@ -82,7 +82,7 @@ const waSocket = new Client({
 })
 ```
 
-### Handling Events
+### Handling Events (Built-in)
 
 There are several events that can be used are as follows :
 
@@ -103,6 +103,44 @@ waSocket.on('caller', ctx => console.log(ctx))
 waSocket.on('poll', ctx => console.log(ctx))
 waSocket.on('presence.update', ctx => console.log(ctx))
 waSocket.on('lid-mapping', ctx => console.log(ctx))
+```
+
+### Event Piping (Pipelining)
+
+You can also use the default events from Baileys.
+
+```Javascript
+waSocket.ev.on('messaging-history.set', (update) => console.log(update))
+waSocket.ev.on('messaging-history.status', (update) => console.log(update))
+waSocket.ev.on('chats.upsert', (update) => console.log(update))
+waSocket.ev.on('chats.update', (update) => console.log(update))
+waSocket.ev.on('chats.delete', (update) => console.log(update))
+waSocket.ev.on('chats.lock', (update) => console.log(update))
+waSocket.ev.on('lid-mapping.update', (update) => console.log(update))
+waSocket.ev.on('presence.update', (update) => console.log(update))
+waSocket.ev.on('contacts.upsert', (update) => console.log(update))
+waSocket.ev.on('contacts.update', (update) => console.log(update))
+waSocket.ev.on('messages.delete', (update) => console.log(update))
+waSocket.ev.on('messages.update', (update) => console.log(update))
+waSocket.ev.on('messages.media-update', (update) => console.log(update))
+waSocket.ev.on('messages.upsert', (update) => console.log(update))
+waSocket.ev.on('messages.reaction', (update) => console.log(update))
+waSocket.ev.on('message-receipt.update', (update) => console.log(update))
+waSocket.ev.on('groups.upsert', (update) => console.log(update))
+waSocket.ev.on('groups.update', (update) => console.log(update))
+waSocket.ev.on('group-participants.update', (update) => console.log(update))
+waSocket.ev.on('group.join-request', (update) => console.log(update))
+waSocket.ev.on('group.member-tag.update', (update) => console.log(update))
+waSocket.ev.on('blocklist.set', (update) => console.log(update))
+waSocket.ev.on('blocklist.update', (update) => console.log(update))
+waSocket.ev.on('call', (update) => console.log(update))
+waSocket.ev.on('labels.edit', (update) => console.log(update))
+waSocket.ev.on('labels.association', (update) => console.log(update))
+waSocket.ev.on('newsletter.reaction', (update) => console.log(update))
+waSocket.ev.on('newsletter.view', (update) => console.log(update))
+waSocket.ev.on('newsletter-participants.update', (update) => console.log(update))
+waSocket.ev.on('newsletter-settings.update', (update) => console.log(update))
+waSocket.ev.on('settings.update', (update) => console.log(update))
 ```
 
 ### Message Metadata
