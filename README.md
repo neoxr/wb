@@ -66,6 +66,7 @@ const waSocket = new Client({
       session: 'session',
       config: process.env?.DATABASE_URL || ''
    },
+   // stealth: 'ios', // Stealth mode to avoid bot detection, device list : ios, android, web, dekstop
    custom_id: 'neoxr',
    bot: (id) => {
       return (id.startsWith('3EB0') && id.length === 40) || id.startsWith('BAE') || /[-]/.test(id)
@@ -534,7 +535,29 @@ client.groupStatus(m.chat, {
 // send group status (text)
 client.groupStatus(m.chat, {
    text: 'Hi!',
-   background: '#FF0000'
+   background: '#FF0000',
+   color: '#222222'
+})
+
+// send group status (close friends)
+// same like group status just add private options
+client.groupStatus(m.chat, {
+   text: 'Hi!',
+   background: '#FF0000',
+   color: '#222222'
+}, {
+   private: {
+      name: 'Neoxr Creative',
+      emoji: '🔥'
+   }
+})
+
+// send group status (instant)
+client.groupStatus(m.chat, m.quoted.fakeObj, {
+   private: {
+      name: 'Neoxr Creative',
+      emoji: '🔥'
+   }
 })
 
 // send meta message v1 (rich message)
