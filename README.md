@@ -223,7 +223,7 @@ client.sendMessageModify(m.chat, `Test!`, m, {
    title: '© neoxr-bot',
    largeThumb: true,
    type: 'preview-link',
-   /* choose: landscape (default), potrait, square */
+   /* choose: landscape (default), portrait, square */
    ratio: 'landscape',
    /* can buffer or url */
    thumbnail: 'https://iili.io/HP3ODj2.jpg',
@@ -246,7 +246,7 @@ client.sendMessageModifyV2(m.chat, `Test!`, m, {
    title: '© neoxr-bot',
    largeThumb: true,
    type: 'preview-link',
-   /* choose: landscape (default), potrait, square */
+   /* choose: landscape (default), portrait, square */
    ratio: 'landscape',
    /* can buffer or url */
    thumbnail: 'https://iili.io/HP3ODj2.jpg',
