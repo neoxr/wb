@@ -23,6 +23,7 @@ export interface ConnectionOpts {
    bypass_disappearing?: boolean,
    server?: boolean,
    bot?: any,
+   stealth?: string,
    custom_id: string,
    pairing?: {
       state: boolean,
