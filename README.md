@@ -309,6 +309,26 @@ client.sendPoll(m.chat, 'Do you like this library ?', {
    multiselect: false
 })
 
+// send polling message (with image)
+client.sendPoll(m.chat, 'Choose one:', {
+   options: [
+      { name: 'menu', image: 'https://i.pinimg.com/736x/89/8c/5c/898c5cd36ce73762b57e0c3f39d61157.jpg' },
+      { name: 'runtime', image: 'https://i.pinimg.com/736x/4d/67/5a/4d675afa9a7a4ec4ee934484c615e0bf.jpg' }
+   ]
+}, m)
+
+// send poll result
+client.pollResult(m.chat, {
+   name: 'Demo Poll Result',
+   votes: [{
+      name: 'Jokowi',
+      count: 1500
+   }, {
+      name: 'Prabowo',
+      count: 200
+   }]
+}, m)
+
 // send contact message
 client.sendContact(m.chat, [{
    name: 'Wildan Izzudin',
@@ -716,16 +736,4 @@ client.sendMetaMsg(m.chat, [
    }], m, {
    title: global.header
 })
-
-// send poll result
-client.pollResult(m.chat, {
-   name: 'Demo Poll Result',
-   votes: [{
-      name: 'Jokowi',
-      count: 1500
-   }, {
-      name: 'Prabowo',
-      count: 200
-   }]
-}, m)
 ```
