@@ -266,6 +266,12 @@ client.sendFile(m.chat, 'https://iili.io/HP3ODj2.jpg', 'image.jpg', 'Test!', m, 
    document: true
 })
 
+// send a photo live from path, url, or buffer (auto extension)
+client.sendFile(m.chat, 'https://iili.io/HP3ODj2.jpg', 'image.jpg', 'Test!', m, {
+   photo_live: true,
+   // thumbnail: Buffer | URL | Path
+})
+
 // send a voicenote from path, url, or buffer
 client.sendFile(m.chat, './media/audio/ah.mp3', '', '', m, {
    ptt: true
