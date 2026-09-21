@@ -266,8 +266,8 @@ client.sendFile(m.chat, 'https://iili.io/HP3ODj2.jpg', 'image.jpg', 'Test!', m, 
    document: true
 })
 
-// send a photo live from path, url, or buffer (auto extension)
-client.sendFile(m.chat, 'https://iili.io/HP3ODj2.jpg', 'image.jpg', 'Test!', m, {
+// send a photo live from path, url, or buffer (video)
+client.sendFile(m.chat, 'https://cdn.videy.co/7QUk0zRO1.mp4', 'video.mp4', 'Test!', m, {
    photo_live: true,
    // thumbnail: Buffer | URL | Path
 })
