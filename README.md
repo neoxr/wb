@@ -746,11 +746,12 @@ client.sendMetaMsg(m.chat, [
 
 ### Exclusive Message
 
-This feature can be enabled simply by adding the `{ exclusive: true }` parameter. It allows messages to be sent within a group, but the message can only be seen by the sender. Other members of the group cannot see it.
+This feature can be enabled by adding the `{ exclusive: true }` parameter to the message options. It allows messages to be sent within a group, but the message can only be seen by the sender. Other members of the group cannot see it.
 
+The `exclusive: true` parameter can be used with message-sending methods that support message options, including `.reply()`, `.sendFile()`, `.replyButton()`, etc.
 
 ```Javascript
 client.reply(m.chat, 'Hi, this message can only be seen by you.', m, { exclusive: true })
 ```
 
-The `m` (quoted message) parameter is required and must always be provided when using this feature.
+The `m` (quoted message) parameter is required and must always be provided when using `exclusive: true`.
