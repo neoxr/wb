@@ -1,6 +1,6 @@
 {
   "name": "@neoxr/wb",
-  "version": "6.0.0-rc.89",
+  "version": "6.0.0-rc.90",
   "description": "Simplicity WhatsApp Bot (Baileys)",
   "main": "lib/index.js",
   "files": [
@@ -33,7 +33,6 @@
     "chalk": "4.1.0",
     "chokidar": "~4.0.3",
     "colors": "~1.4.0",
-    "crypto-digest-sync": "^1.0.0",
     "date-fns": "^4.1.0",
     "dotenv": "^16.0.1",
     "file-type": "~16.5.2",
